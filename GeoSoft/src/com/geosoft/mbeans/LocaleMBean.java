@@ -6,10 +6,10 @@ import java.util.Map;
 import javax.annotation.PostConstruct;
 import javax.faces.context.FacesContext;
 
-public class LocaleMBean {
-	private Locale locale = FacesContext.getCurrentInstance().getViewRoot().getLocale();
-	private String junior = "Hola Soy Junior y estoy con Gabyta";
+import com.geosoft.utils.General;
 
+public class LocaleMBean extends General{
+	private Locale locale = FacesContext.getCurrentInstance().getViewRoot().getLocale();
 	
 	//Metodos
 	@PostConstruct
@@ -27,13 +27,10 @@ public class LocaleMBean {
     }
 	
     public String editAction() {
-  	  Map<String,String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-  	  System.out.println(params);
-  	  
-  	 
-  	  
-  	  String action = params.get("j_id_jsp_223676087_2:j_id_jsp_223676087_3");
-      System.out.println(action);
+  	  String language = getRequestParameterString("browserLang");
+  	  System.out.println(language);
+      locale = new Locale(language);
+      FacesContext.getCurrentInstance().getViewRoot().setLocale(locale);
       return "";
     }
     
@@ -41,17 +38,8 @@ public class LocaleMBean {
 	public Locale getLocale() {
 		return locale;
 	}
-
 	public void setLocale(Locale locale) {
 		this.locale = locale;
-	}
-
-	public String getJunior() {
-		return junior;
-	}
-
-	public void setJunior(String junior) {
-		this.junior = junior;
 	}
 	
 }

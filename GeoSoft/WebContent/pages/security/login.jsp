@@ -6,61 +6,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- META -->
 		<title>GeoSoft - Software de Geolocalización Vehicular</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/normalize.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/kickstart.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css" media="all" /> 
+
+		<!-- Javascript -->
+		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.2.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/kickstart.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/javascript.js"></script>
 	</head>
 	<body>
 
 		<f:view locale="#{localeMBean.locale}">
-			<h:outputText value="#{localeMBean.locale}"></h:outputText><br/>
+			<!--Las Iniciales del Idioma de Nuestro Navegador Web es: ${pageContext.request.locale}<br/>-->
+			<h:form id="frmLogin">
+				<input name="browserLang" value="${pageContext.request.locale}" type="text" style="display: none"></input>
+				<h:commandLink id="cmlBrowserLang" value="Click here" action="#{localeMBean.editAction}"></h:commandLink>
 			
-			<h:form>
-				
-				<h:commandButton value="btngaby" action="#{localeMBean.editAction}">
-					<f:param id="lokito" value="soyrex" name="lokito"></f:param>
-				</h:commandButton>
-				
-			
+				<h:outputText><fmt:message key="choose_a_language"/>: </h:outputText>
 			    <h:selectOneMenu value="#{localeMBean.language}" onchange="submit()">
 			        <f:selectItem itemValue="en" itemLabel="English" />
 			        <f:selectItem itemValue="es" itemLabel="Español" />
-			    </h:selectOneMenu>
+			    </h:selectOneMenu><br/>
+			    
+			    <fmt:message key="user" /><br/>
+				<fmt:message key="password" /><br/>
+			
+				<a href="${pageContext.request.contextPath}/pages/home.jsp">Iniciar Session</a>
+			    
 			</h:form>		
-			
-			
-			Iniciales del Idioma de Nuestro Navegador Web : ${pageContext.request.locale}<br/>
-						
-			<h:outputText><fmt:message key="choose_a_language"/>: </h:outputText>
-						
-			<a href="index.jsf?lang=es">español</a>&nbsp;
-			<a href="index.jsf?lang=en">ingles</a><br/>
-			
-			<fmt:setLocale value="${pageContext.request.locale}" scope="session" />
-			<c:if test="${pageContext.request.locale != 'en' && pageContext.request.locale != 'es'}">
-			   	<fmt:setLocale value="en" scope="session" />
-			</c:if>
-			
-			loco: ${param.lang}<br/>
-			
-			<c:if test="${param.lang != null}">
-			   	<fmt:setLocale value="${param.lang}" scope="session" />
-			</c:if>
-			
-			<fmt:message key="user" /><br/>
-			<fmt:message key="password" /><br/>
-			
-			<a href="index.jsf?lang=en"><fmt:message key="password" /></a><br/>
-			<a href="${pageContext.request.contextPath}/pages/home.jsp">Iniciar Session</a>
-			
-			
-				
-			<h:selectOneMenu>
-			   <f:selectItem itemValue="1" itemLabel="Item 1" />
-			   <f:selectItem itemValue="2" itemLabel="Item 2" />	   							
-			</h:selectOneMenu>
-		
-			
 		</f:view>
-			
 	</body>
 </html>
