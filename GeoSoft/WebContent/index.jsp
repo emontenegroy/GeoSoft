@@ -1,0 +1,1 @@
+<jsp:forward page="pages/security/login.jsp"></jsp:forward>
