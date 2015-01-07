@@ -1,1 +1,1 @@
-<img src="../resources/images/logo.png" alt="Smiley face" height="42">
+<img src="${pageContext.request.contextPath}/resources/images/logo.png" alt="Smiley face" height="42">

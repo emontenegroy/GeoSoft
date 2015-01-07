@@ -23,20 +23,20 @@ body{
 .page-menu{
 	float: left;
 	width: 20%;
-	height: 85%;
+	height: 88%;
 }
 	
 /* Body */
 .page-body{
 	float: left;
 	width: 80%;
-	height: 85%;
+	height: 88%;
 }
 	
 /* Footer */
 .page-footer{
 	clear: both;
-	height: 5%;
+	height: 2%;
 	padding: 5px;
 }
 
@@ -61,6 +61,17 @@ body{
 	text-align: center;
 }
 
+/* Map */
+.map .map-canvas{
+	height: 80%; 
+	width: 100%;
+}
+
+.map .monitoreo{
+	height: 20%; 
+	width: 100%;
+	background-color: white;
+}
 
 
 

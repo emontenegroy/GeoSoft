@@ -1,26 +1,22 @@
 package com.geosoft.mbeans;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.geosoft.beans.UsuarioDTO;
 import com.geosoft.services.UsuarioService;
 import com.geosoft.utils.General;
 
 public class UsuarioMBean extends General{
+	//Servicios
+	private UsuarioService servicioUsuario = new UsuarioService();
+	
 	//Navegacion
 	private final String NAVIGATION_LOGIN = "login";
 	private final String NAVIGATION_ERROR = "";
-	/*
-    private final String NAVIGATION_LISTAR = "loco?faces-redirect=true";
-    private final String NAVIGATION_INSERTAR = "operadoraInsertar?faces-redirect=true";
-    private final String NAVIGATION_ACTUALIZAR = "operadoraActualizar?faces-redirect=true";
-    private final String NAVIGATION_ERROR = "";   
-	*/
+
 	//Variables Globales
-	private UsuarioService servicioUsuario = new UsuarioService();
+	
 		
 	//Constructor
+	
 	
 	//Metodos
 	public String login(){
@@ -35,12 +31,13 @@ public class UsuarioMBean extends General{
 		user=servicioUsuario.loguear(user);
 		
 		if(user!=null){
+			getSession(false).setAttribute("user", user);
 			return NAVIGATION_LOGIN;
 		}
 		
 		return NAVIGATION_ERROR;
 	}
 	
-	//Getters and Setters
+	//Obtener y Establecer
 	
 }

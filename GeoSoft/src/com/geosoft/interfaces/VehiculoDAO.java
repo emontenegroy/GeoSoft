@@ -4,8 +4,7 @@ import java.util.List;
 
 import com.geosoft.beans.UsuarioDTO;
 
-public interface UsuarioDAO {
-	//Declaramos los metodos para cada una de las acciones a realizar en la BD
+public interface VehiculoDAO {
 	//Basicos
 	public int insertar(UsuarioDTO usuario);
 	public int actualizar(UsuarioDTO usuario);
@@ -13,5 +12,6 @@ public interface UsuarioDAO {
 	public int eliminar(Integer usuarioId);
 	
 	//Avanzados
-	public UsuarioDTO loguear(UsuarioDTO usuario);
+	
+
 }

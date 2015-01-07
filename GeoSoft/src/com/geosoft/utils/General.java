@@ -4,6 +4,8 @@ import java.math.BigInteger;
 
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpSession;
+
 
 public class General {
 	//General
@@ -12,6 +14,10 @@ public class General {
         return context.getExternalContext();
     }
 	
+	protected HttpSession getSession(boolean create) {
+		//true=crea una session nueva y false=retorna la session actual
+        return (HttpSession) getExternalContext().getSession(create);
+    }
 	
 	//Metodos Parametros    
     protected String getRequestParameterString(String param) {
