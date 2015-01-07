@@ -8,7 +8,7 @@ import javax.faces.context.FacesContext;
 
 import com.geosoft.utils.General;
 
-public class LocaleMBean extends General{
+public class LocaleMBean{
 	private Locale locale = FacesContext.getCurrentInstance().getViewRoot().getLocale();
 	
 	//Metodos
@@ -25,15 +25,7 @@ public class LocaleMBean extends General{
     public String getLanguage() {
         return locale.getLanguage();
     }
-	
-    public String editAction() {
-  	  String language = getRequestParameterString("browserLang");
-  	  System.out.println(language);
-      locale = new Locale(language);
-      FacesContext.getCurrentInstance().getViewRoot().setLocale(locale);
-      return "";
-    }
-    
+	   
 	//Getters and Setters
 	public Locale getLocale() {
 		return locale;

@@ -26,4 +26,9 @@ public class UsuarioService {
 		return objUsuarioDAO.eliminar(usuarioId);
 	}
 	
+	//Otros Metodos
+	public UsuarioDTO loguear(UsuarioDTO usuario){
+		return objUsuarioDAO.loguear(usuario);
+	}
+	
 }

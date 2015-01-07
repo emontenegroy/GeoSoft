@@ -40,9 +40,22 @@ body{
 	padding: 5px;
 }
 
+/* Login */
 
+.login-idioma{
+	float: right;
+	margin: 5px;
+}
 
-
+.login-sesion{
+	display: inline-block;
+	width: 300px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -100px 0px 0px -150px;
+}
 
 
 

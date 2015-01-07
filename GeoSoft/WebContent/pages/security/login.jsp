@@ -27,18 +27,29 @@
 		<f:view locale="#{localeMBean.locale}">
 			<!--Las Iniciales del Idioma de Nuestro Navegador Web es: ${pageContext.request.locale}<br/>-->
 			<h:form id="frmLogin">
-			
-				<h:outputText><fmt:message key="choose_a_language"/>: </h:outputText>
-			    <h:selectOneMenu value="#{localeMBean.language}" onchange="submit()">
-			        <f:selectItem itemValue="en" itemLabel="English" />
-			        <f:selectItem itemValue="es" itemLabel="Español" />
-			    </h:selectOneMenu><br/>
-			    
-			    <fmt:message key="user" /><br/>
-				<fmt:message key="password" /><br/>
-			
-				<a href="${pageContext.request.contextPath}/pages/home.jsp">Iniciar Session</a>
-			    
+				<div class="login-idioma">
+					<h:outputLabel><fmt:message key="choose_a_language"/>:</h:outputLabel>
+				    <h:selectOneMenu value="#{localeMBean.language}" onchange="submit()">
+				        <f:selectItem itemValue="en" itemLabel="English" />
+				        <f:selectItem itemValue="es" itemLabel="Español" />
+				    </h:selectOneMenu>
+				</div>
+				<div class="login-sesion">
+					<table>
+						<tr>
+							<td><h:outputLabel><fmt:message key="user" /></h:outputLabel></td>
+							<td><h:inputText id="usuario"></h:inputText></td>
+						</tr>
+						<tr>
+							<td><h:outputLabel><fmt:message key="password" /></h:outputLabel></td>
+							<td><h:inputSecret id="clave"></h:inputSecret></td>
+						</tr>
+						<tr>
+							<td><a href="${pageContext.request.contextPath}/pages/home.jsp">Iniciar Session</a></td>
+							<td><h:commandLink value="Iniciar Sesión" action="/security/loco.jsp"></h:commandLink></td>
+						</tr>
+					</table>
+				</div>
 			</h:form>		
 		</f:view>
 	</body>

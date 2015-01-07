@@ -152,5 +152,40 @@ public class MySQLUsuarioDAO implements UsuarioDAO {
 		
 		return result;
 	}
+	//Otros Metodos
+	public UsuarioDTO loguear(UsuarioDTO usuario) {
 
+		Connection con = null;
+		CallableStatement cst = null;
+		String sp;
+		UsuarioDTO result = null;
+		
+		try {
+			con = MySQLConexion.getConexion();
+			sp = "{call sp_Usuario_Loguear(?, ?)}";
+			cst = con.prepareCall(sp);
+
+			cst.setString(1, usuario.getUsuario());
+			cst.setString(2, usuario.getClave());
+			
+			ResultSet rs = cst.executeQuery();
+			
+			while (rs.next()) {
+				result = new UsuarioDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6).charAt(0));
+			}
+			
+		} catch (Exception e) {
+			System.out.println("MySQLUsuarioDAO - listar -> Error en la Conexión: "+e.getMessage());
+		} finally {
+			try {
+				if(con != null) con.close();
+				if(cst != null) cst.close();
+			} catch (SQLException e) {
+				System.out.println("MySQLUsuarioDAO - listar -> No se pudo Cerrar la Conexion: "+e.getMessage());
+			} 
+		}
+		
+		// TODO Auto-generated method stub
+		return result;
+	}
 }
