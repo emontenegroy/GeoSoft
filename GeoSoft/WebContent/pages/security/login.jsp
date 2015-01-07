@@ -27,8 +27,6 @@
 		<f:view locale="#{localeMBean.locale}">
 			<!--Las Iniciales del Idioma de Nuestro Navegador Web es: ${pageContext.request.locale}<br/>-->
 			<h:form id="frmLogin">
-				<input name="browserLang" value="${pageContext.request.locale}" type="text" style="display: none"></input>
-				<h:commandLink id="cmlBrowserLang" value="Click here" action="#{localeMBean.editAction}"></h:commandLink>
 			
 				<h:outputText><fmt:message key="choose_a_language"/>: </h:outputText>
 			    <h:selectOneMenu value="#{localeMBean.language}" onchange="submit()">

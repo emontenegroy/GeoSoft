@@ -32,7 +32,7 @@
 		<artifactId>myfaces-impl</artifactId>
 		<version>1.2.12</version>
 	</dependency>
-
+	
 	<!-- Necesario para usar el Tag C-->
 	<dependency>
 		<groupId>javax.servlet</groupId>

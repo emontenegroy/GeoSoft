@@ -18,7 +18,7 @@
 		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/javascript.js"></script>
 	</head>
 
-	<body>
+	<body class="master">
 		<div class="page-header">
 			<tiles:insertAttribute name="header" />	
 		</div>

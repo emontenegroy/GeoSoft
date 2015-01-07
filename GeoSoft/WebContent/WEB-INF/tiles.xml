@@ -18,4 +18,8 @@
 		<put-attribute name="body" value="/pages/maintenances/user/userList.jsp" />
     </definition>
   
+	<definition name="vehiclePage" extends="commonPage">
+		<put-attribute name="body" value="/pages/maintenances/vehicle/vehicleList.jsp" />
+    </definition>
+  
 </tiles-definitions>

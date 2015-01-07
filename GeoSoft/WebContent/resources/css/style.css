@@ -6,29 +6,38 @@ body{
 	height: 98%;
 }
 
+/* Master */
+
+.master{
+	color: white;
+	background-color: #333B3E;
+}
+
 /* Header */
 .page-header{
 	height: 10%;
+	padding: 5px;
 }
 	
 /* Menu */
 .page-menu{
 	float: left;
 	width: 20%;
-	height: 80%;
+	height: 85%;
 }
 	
 /* Body */
 .page-body{
 	float: left;
 	width: 80%;
-	height: 80%;
+	height: 85%;
 }
 	
 /* Footer */
 .page-footer{
 	clear: both;
-	height: 10%;
+	height: 5%;
+	padding: 5px;
 }
 
 

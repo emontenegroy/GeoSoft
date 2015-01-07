@@ -1,1 +1,1 @@
-soy el footer
+GeoSoft 1.0 Rev.1 | Terminos legales | Politicas de Privacidad | Sobre GeoSoft

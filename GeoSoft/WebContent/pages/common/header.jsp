@@ -1,1 +1,1 @@
-soy el header
+<img src="../resources/images/logo.png" alt="Smiley face" height="42">
