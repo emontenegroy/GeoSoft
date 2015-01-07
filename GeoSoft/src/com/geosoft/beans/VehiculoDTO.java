@@ -9,11 +9,11 @@ public class VehiculoDTO {
 	private String Anio;
 	private String Modelo;
 	private Character Estado;
-	private Integer ClienteId;
-	private Integer TipoVehiculoId;
+	private ClienteDTO ClienteId;
+	private TipoVehiculoDTO TipoVehiculoId;
 
 	//constructor
-	public VehiculoDTO(Integer vehiculoId, String placa, String nroMotor,String marca, String anio, String modelo, Character estado,Integer clienteId, Integer tipoVehiculoId) {
+	public VehiculoDTO(Integer vehiculoId, String placa, String nroMotor,String marca, String anio, String modelo, Character estado,ClienteDTO clienteId, TipoVehiculoDTO tipoVehiculoId) {
 		VehiculoId = vehiculoId;
 		Placa = placa;
 		NroMotor = nroMotor;
@@ -160,19 +160,19 @@ public class VehiculoDTO {
 		Estado = estado;
 	}
 
-	public Integer getClienteId() {
+	public ClienteDTO getClienteId() {
 		return ClienteId;
 	}
 
-	public void setClienteId(Integer clienteId) {
+	public void setClienteId(ClienteDTO clienteId) {
 		ClienteId = clienteId;
 	}
 
-	public Integer getTipoVehiculoId() {
+	public TipoVehiculoDTO getTipoVehiculoId() {
 		return TipoVehiculoId;
 	}
 
-	public void setTipoVehiculoId(Integer tipoVehiculoId) {
+	public void setTipoVehiculoId(TipoVehiculoDTO tipoVehiculoId) {
 		TipoVehiculoId = tipoVehiculoId;
 	}
 	
