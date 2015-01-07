@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14202040208680" configfile="/GeoSoft/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="security/login" id="pf14206103170000" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14206103170011" path="/security/login.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/home" id="pf14206103170012" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14206103170011 pf14206106784485" path="/pages/home.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="index.jsf" id="pf14206106784496" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14206106784485" path="/index.jsf"/>
-  <links id="pf14206103170011" target="pf14206103170012" source="pf14206103170000" outcome="login" redirect="true"/>
-  <links id="pf14206106784485" target="pf14206103170012" source="pf14206106784496" outcome="login" redirect="true"/>
+  <nodes xsi:type="pageflow:PFPage" name="index" id="pf142064659540521" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf142064659540522" path="/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/home" id="pf142064659540523" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf142064659540522" path="/pages/home.jsp"/>
+  <links id="pf142064659540522" target="pf142064659540523" source="pf142064659540521" outcome="login" redirect="true"/>
 </pageflow:Pageflow>

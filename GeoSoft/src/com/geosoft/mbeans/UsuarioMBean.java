@@ -9,11 +9,14 @@ import com.geosoft.utils.General;
 
 public class UsuarioMBean extends General{
 	//Navegacion
+	private final String NAVIGATION_LOGIN = "login";
+	private final String NAVIGATION_ERROR = "";
+	/*
     private final String NAVIGATION_LISTAR = "loco?faces-redirect=true";
     private final String NAVIGATION_INSERTAR = "operadoraInsertar?faces-redirect=true";
     private final String NAVIGATION_ACTUALIZAR = "operadoraActualizar?faces-redirect=true";
     private final String NAVIGATION_ERROR = "";   
-	
+	*/
 	//Variables Globales
 	private UsuarioService servicioUsuario = new UsuarioService();
 		
@@ -21,24 +24,21 @@ public class UsuarioMBean extends General{
 	
 	//Metodos
 	public String login(){
-		return "login";
-		/*
 		String usuario = getRequestParameterString("frmLogin:usuario");
 		String clave = getRequestParameterString("frmLogin:clave");
 		UsuarioDTO user = new UsuarioDTO(null, "", "", usuario, clave,null);
-				
-		System.out.println(usuario);
-		System.out.println(clave);
+
+		//Por Ahora System.out.println hasta en un futuro implemetar Loj4J
+		System.out.println("Usuario: "+usuario);
+		System.out.println("Clave: "+clave);
 		
 		user=servicioUsuario.loguear(user);
 		
 		if(user!=null){
-			System.out.println(NAVIGATION_LISTAR);
-			return "login";
+			return NAVIGATION_LOGIN;
 		}
 		
 		return NAVIGATION_ERROR;
-		*/
 	}
 	
 	//Getters and Setters

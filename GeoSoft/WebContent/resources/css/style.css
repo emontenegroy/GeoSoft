@@ -57,7 +57,9 @@ body{
 	margin: -100px 0px 0px -150px;
 }
 
-
+.login-sesion table tr.alt:nth-child(3) > td:nth-child(1) {
+	text-align: center;
+}
 
 
 

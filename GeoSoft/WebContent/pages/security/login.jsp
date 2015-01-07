@@ -28,8 +28,8 @@
 			<!--Las Iniciales del Idioma de Nuestro Navegador Web es: ${pageContext.request.locale}<br/>-->
 			<h:form id="frmLogin">
 				<div class="login-idioma">
-					<h:outputLabel><fmt:message key="choose_a_language"/>:</h:outputLabel>
-				    <h:selectOneMenu value="#{localeMBean.language}" onchange="submit()">
+					<h:outputLabel for="lenguaje"><fmt:message key="choose_a_language"/>:</h:outputLabel>
+				    <h:selectOneMenu id="lenguaje" value="#{localeMBean.language}" onchange="submit()">
 				        <f:selectItem itemValue="en" itemLabel="English" />
 				        <f:selectItem itemValue="es" itemLabel="Español" />
 				    </h:selectOneMenu>
@@ -37,16 +37,15 @@
 				<div class="login-sesion">
 					<table>
 						<tr>
-							<td><h:outputLabel><fmt:message key="user" /></h:outputLabel></td>
-							<td><h:inputText id="usuario"></h:inputText></td>
+							<td><h:outputLabel for="usuario"><fmt:message key="user" /></h:outputLabel></td>
+							<td><h:inputText id="usuario" maxlength="45"></h:inputText></td>
 						</tr>
 						<tr>
-							<td><h:outputLabel><fmt:message key="password" /></h:outputLabel></td>
+							<td><h:outputLabel for="clave"><fmt:message key="password" /></h:outputLabel></td>
 							<td><h:inputSecret id="clave"></h:inputSecret></td>
 						</tr>
 						<tr>
-							<td><a href="${pageContext.request.contextPath}/pages/home.jsp">Iniciar Session</a></td>
-							<td><h:commandLink value="Iniciar Sesión" action="/security/loco.jsp"></h:commandLink></td>
+							<td colspan="2"><h:commandLink value="Iniciar Sesión" action="#{usuarioMBean.login}"></h:commandLink></td>
 						</tr>
 					</table>
 				</div>
