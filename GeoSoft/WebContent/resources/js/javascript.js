@@ -1,6 +1,7 @@
 /*Variables*/
 var map;
 var monitoreoArray = [];
+var vehiculos = [];
 
 //DOM Cargado
 var idioma = true;
@@ -14,8 +15,13 @@ $(window).load(function() {
 });
 
 
+
+
 /*Manejo de Mapas*/
 function initialize() {
+  console.log("initialize");
+  cargarVehiculos();
+	
   var mapOptions = {
     zoom: 8,
     center: new google.maps.LatLng(-10.379765224421455,-77.80517578125)

@@ -2,47 +2,41 @@ package com.geosoft.beans;
 
 public class VehiculoDTO {
 	//tipos de Datos
-	private Integer VehiculoId;
-	private String Placa;
-	private String NroMotor;
-	private String Marca;
-	private String Anio;
-	private String Modelo;
-	private Character Estado;
-	private ClienteDTO ClienteId;
-	private TipoVehiculoDTO TipoVehiculoId;
+	private Integer vehiculoId;
+	private String placa;
+	private String nroMotor;
+	private String marca;
+	private String anio;
+	private String modelo;
+	private Character estado;
+	private ClienteDTO cliente;
+	private TipoVehiculoDTO tipoVehiculo;
 
 	//constructor
-	public VehiculoDTO(Integer vehiculoId, String placa, String nroMotor,String marca, String anio, String modelo, Character estado,ClienteDTO clienteId, TipoVehiculoDTO tipoVehiculoId) {
-		VehiculoId = vehiculoId;
-		Placa = placa;
-		NroMotor = nroMotor;
-		Marca = marca;
-		Anio = anio;
-		Modelo = modelo;
-		Estado = estado;
-		ClienteId = clienteId;
-		TipoVehiculoId = tipoVehiculoId;
+	public VehiculoDTO() {
 	}
 	
+	public VehiculoDTO(Integer vehiculoId, String placa, String nroMotor,
+			String marca, String anio, String modelo, Character estado,
+			ClienteDTO clienteId, TipoVehiculoDTO tipoVehiculoId) {
+		this.vehiculoId = vehiculoId;
+		this.placa = placa;
+		this.nroMotor = nroMotor;
+		this.marca = marca;
+		this.anio = anio;
+		this.modelo = modelo;
+		this.estado = estado;
+		this.cliente = clienteId;
+		this.tipoVehiculo = tipoVehiculoId;
+	}
+
 	//metodos para comparacion de objetos
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((Anio == null) ? 0 : Anio.hashCode());
 		result = prime * result
-				+ ((ClienteId == null) ? 0 : ClienteId.hashCode());
-		result = prime * result + ((Estado == null) ? 0 : Estado.hashCode());
-		result = prime * result + ((Marca == null) ? 0 : Marca.hashCode());
-		result = prime * result + ((Modelo == null) ? 0 : Modelo.hashCode());
-		result = prime * result
-				+ ((NroMotor == null) ? 0 : NroMotor.hashCode());
-		result = prime * result + ((Placa == null) ? 0 : Placa.hashCode());
-		result = prime * result
-				+ ((TipoVehiculoId == null) ? 0 : TipoVehiculoId.hashCode());
-		result = prime * result
-				+ ((VehiculoId == null) ? 0 : VehiculoId.hashCode());
+				+ ((vehiculoId == null) ? 0 : vehiculoId.hashCode());
 		return result;
 	}
 
@@ -55,125 +49,85 @@ public class VehiculoDTO {
 		if (getClass() != obj.getClass())
 			return false;
 		VehiculoDTO other = (VehiculoDTO) obj;
-		if (Anio == null) {
-			if (other.Anio != null)
+		if (vehiculoId == null) {
+			if (other.vehiculoId != null)
 				return false;
-		} else if (!Anio.equals(other.Anio))
-			return false;
-		if (ClienteId == null) {
-			if (other.ClienteId != null)
-				return false;
-		} else if (!ClienteId.equals(other.ClienteId))
-			return false;
-		if (Estado == null) {
-			if (other.Estado != null)
-				return false;
-		} else if (!Estado.equals(other.Estado))
-			return false;
-		if (Marca == null) {
-			if (other.Marca != null)
-				return false;
-		} else if (!Marca.equals(other.Marca))
-			return false;
-		if (Modelo == null) {
-			if (other.Modelo != null)
-				return false;
-		} else if (!Modelo.equals(other.Modelo))
-			return false;
-		if (NroMotor == null) {
-			if (other.NroMotor != null)
-				return false;
-		} else if (!NroMotor.equals(other.NroMotor))
-			return false;
-		if (Placa == null) {
-			if (other.Placa != null)
-				return false;
-		} else if (!Placa.equals(other.Placa))
-			return false;
-		if (TipoVehiculoId == null) {
-			if (other.TipoVehiculoId != null)
-				return false;
-		} else if (!TipoVehiculoId.equals(other.TipoVehiculoId))
-			return false;
-		if (VehiculoId == null) {
-			if (other.VehiculoId != null)
-				return false;
-		} else if (!VehiculoId.equals(other.VehiculoId))
+		} else if (!vehiculoId.equals(other.vehiculoId))
 			return false;
 		return true;
 	}
 	
 	//obtener y establecer
 	public Integer getVehiculoId() {
-		return VehiculoId;
+		return vehiculoId;
 	}
 
 	public void setVehiculoId(Integer vehiculoId) {
-		VehiculoId = vehiculoId;
+		this.vehiculoId = vehiculoId;
 	}
 
 	public String getPlaca() {
-		return Placa;
+		return placa;
 	}
 
 	public void setPlaca(String placa) {
-		Placa = placa;
+		this.placa = placa;
 	}
 
 	public String getNroMotor() {
-		return NroMotor;
+		return nroMotor;
 	}
 
 	public void setNroMotor(String nroMotor) {
-		NroMotor = nroMotor;
+		this.nroMotor = nroMotor;
 	}
 
 	public String getMarca() {
-		return Marca;
+		return marca;
 	}
 
 	public void setMarca(String marca) {
-		Marca = marca;
+		this.marca = marca;
 	}
 
 	public String getAnio() {
-		return Anio;
+		return anio;
 	}
 
 	public void setAnio(String anio) {
-		Anio = anio;
+		this.anio = anio;
 	}
 
 	public String getModelo() {
-		return Modelo;
+		return modelo;
 	}
 
 	public void setModelo(String modelo) {
-		Modelo = modelo;
+		this.modelo = modelo;
 	}
 
 	public Character getEstado() {
-		return Estado;
+		return estado;
 	}
 
 	public void setEstado(Character estado) {
-		Estado = estado;
+		this.estado = estado;
 	}
 
-	public ClienteDTO getClienteId() {
-		return ClienteId;
+	public ClienteDTO getCliente() {
+		return cliente;
 	}
 
-	public void setClienteId(ClienteDTO clienteId) {
-		ClienteId = clienteId;
+	public void setCliente(ClienteDTO cliente) {
+		this.cliente = cliente;
 	}
 
-	public TipoVehiculoDTO getTipoVehiculoId() {
-		return TipoVehiculoId;
+	public TipoVehiculoDTO getTipoVehiculo() {
+		return tipoVehiculo;
 	}
 
-	public void setTipoVehiculoId(TipoVehiculoDTO tipoVehiculoId) {
-		TipoVehiculoId = tipoVehiculoId;
+	public void setTipoVehiculo(TipoVehiculoDTO tipoVehiculo) {
+		this.tipoVehiculo = tipoVehiculo;
 	}
 	
 }

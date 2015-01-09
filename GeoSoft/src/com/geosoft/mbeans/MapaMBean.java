@@ -1,12 +1,15 @@
 package com.geosoft.mbeans;
 
-import com.geosoft.services.UsuarioService;
-import com.geosoft.utils.General;
+import java.util.List;
 
-public class MapaMBean  extends General{
+import com.geosoft.beans.HistoricaDTO;
+import com.geosoft.beans.UsuarioDTO;
+import com.geosoft.services.HistoricaService;
+import com.geosoft.utils.General;
+public class MapaMBean extends General{
 
 	//Servicios
-	private UsuarioService servicioUsuario = new UsuarioService();
+	private HistoricaService servicioHistorica = new HistoricaService();
 	
 	//Navegacion
 	/*
@@ -17,7 +20,7 @@ public class MapaMBean  extends General{
 	*/
 	
 	//Variables Globales
-	
+	private List<HistoricaDTO> listaMonitoreo;
 	
 	//Constructor
 	public MapaMBean() {
@@ -28,15 +31,22 @@ public class MapaMBean  extends General{
 	}
 	
 	//Metodos
-	private void cargarDatos() {
-		
-	}
-
 	private void inicializarDatos() {
 		
 	}
 	
-	//Obtener y Establecer
+	private void cargarDatos() {
+		System.out.println(((UsuarioDTO)getSession(false).getAttribute("user")).getNombre());
+		listaMonitoreo = servicioHistorica.listarMonitoreo((UsuarioDTO)getSession(true).getAttribute("user"));
+	}
 
+	//Obtener y Establecer
+	public List<HistoricaDTO> getListaMonitoreo() {
+		return listaMonitoreo;
+	}
+
+	public void setListaMonitoreo(List<HistoricaDTO> listaMonitoreo) {
+		this.listaMonitoreo = listaMonitoreo;
+	}
 	
 }

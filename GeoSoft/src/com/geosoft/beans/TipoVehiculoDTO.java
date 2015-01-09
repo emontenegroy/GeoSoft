@@ -2,13 +2,16 @@ package com.geosoft.beans;
 
 public class TipoVehiculoDTO {
 	//tipos de Datos
-	private Integer TipoVehiculoId;
-	private String Descripcion;
+	private Integer tipoVehiculoId;
+	private String descripcion;
 
 	//constructor
+	public TipoVehiculoDTO() {
+	}
+	
 	public TipoVehiculoDTO(Integer tipoVehiculoId, String descripcion) {
-		TipoVehiculoId = tipoVehiculoId;
-		Descripcion = descripcion;
+		this.tipoVehiculoId = tipoVehiculoId;
+		this.descripcion = descripcion;
 	}
 	
 	//metodos para comparacion de objetos
@@ -17,9 +20,7 @@ public class TipoVehiculoDTO {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((Descripcion == null) ? 0 : Descripcion.hashCode());
-		result = prime * result
-				+ ((TipoVehiculoId == null) ? 0 : TipoVehiculoId.hashCode());
+				+ ((tipoVehiculoId == null) ? 0 : tipoVehiculoId.hashCode());
 		return result;
 	}
 
@@ -32,30 +33,29 @@ public class TipoVehiculoDTO {
 		if (getClass() != obj.getClass())
 			return false;
 		TipoVehiculoDTO other = (TipoVehiculoDTO) obj;
-		if (Descripcion == null) {
-			if (other.Descripcion != null)
+		if (tipoVehiculoId == null) {
+			if (other.tipoVehiculoId != null)
 				return false;
-		} else if (!Descripcion.equals(other.Descripcion))
-			return false;
-		if (TipoVehiculoId == null) {
-			if (other.TipoVehiculoId != null)
-				return false;
-		} else if (!TipoVehiculoId.equals(other.TipoVehiculoId))
+		} else if (!tipoVehiculoId.equals(other.tipoVehiculoId))
 			return false;
 		return true;
 	}
 	
 	//obtener y establecer
 	public Integer getTipoVehiculoId() {
-		return TipoVehiculoId;
+		return tipoVehiculoId;
 	}
+
 	public void setTipoVehiculoId(Integer tipoVehiculoId) {
-		TipoVehiculoId = tipoVehiculoId;
+		this.tipoVehiculoId = tipoVehiculoId;
 	}
+
 	public String getDescripcion() {
-		return Descripcion;
+		return descripcion;
 	}
+
 	public void setDescripcion(String descripcion) {
-		Descripcion = descripcion;
+		this.descripcion = descripcion;
 	}
+	
 }

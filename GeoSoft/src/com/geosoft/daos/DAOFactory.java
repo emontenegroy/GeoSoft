@@ -1,5 +1,6 @@
 package com.geosoft.daos;
 
+import com.geosoft.interfaces.HistoricaDAO;
 import com.geosoft.interfaces.UsuarioDAO;
 
 public abstract class DAOFactory {
@@ -22,6 +23,7 @@ public abstract class DAOFactory {
 
 	//Declaramos cada una de los Metodos DAO
 	public abstract UsuarioDAO getUsuarioDAO();
+	public abstract HistoricaDAO getHistoricaDAO();
 
 }
 

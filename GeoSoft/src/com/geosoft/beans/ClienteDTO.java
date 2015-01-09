@@ -1,25 +1,31 @@
 package com.geosoft.beans;
 
 public class ClienteDTO {
-	//tipos de Datos
-	private Integer ClienteId;
-	private String Nombre;
-	private String Apellido;
-	private Integer DNI;
-	private Integer Telefono;
-	private String Correo;
-	private Character Estado;
+	//variables
+	private Integer clienteId;
+	private String nombre;
+	private String apellido;
+	private Integer dni;
+	private Integer telefono;
+	private String correo;
+	private Character estado;
 	private UsuarioDTO usuario;
 	
 	//constructor
-	public ClienteDTO(Integer clienteId, String nombre, String apellido,Integer dNI, Integer telefono, String correo, Character estado,UsuarioDTO usuario) {
-		ClienteId = clienteId;
-		Nombre = nombre;
-		Apellido = apellido;
-		DNI = dNI;
-		Telefono = telefono;
-		Correo = correo;
-		Estado = estado;
+	public ClienteDTO() {
+		
+	}
+	
+	public ClienteDTO(Integer clienteId, String nombre, String apellido,
+			Integer dni, Integer telefono, String correo, Character estado,
+			UsuarioDTO usuario) {
+		this.clienteId = clienteId;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.dni = dni;
+		this.telefono = telefono;
+		this.correo = correo;
+		this.estado = estado;
 		this.usuario = usuario;
 	}
 	
@@ -29,16 +35,7 @@ public class ClienteDTO {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((Apellido == null) ? 0 : Apellido.hashCode());
-		result = prime * result
-				+ ((ClienteId == null) ? 0 : ClienteId.hashCode());
-		result = prime * result + ((Correo == null) ? 0 : Correo.hashCode());
-		result = prime * result + ((DNI == null) ? 0 : DNI.hashCode());
-		result = prime * result + ((Estado == null) ? 0 : Estado.hashCode());
-		result = prime * result + ((Nombre == null) ? 0 : Nombre.hashCode());
-		result = prime * result
-				+ ((Telefono == null) ? 0 : Telefono.hashCode());
-		result = prime * result + ((usuario == null) ? 0 : usuario.hashCode());
+				+ ((clienteId == null) ? 0 : clienteId.hashCode());
 		return result;
 	}
 
@@ -51,104 +48,69 @@ public class ClienteDTO {
 		if (getClass() != obj.getClass())
 			return false;
 		ClienteDTO other = (ClienteDTO) obj;
-		if (Apellido == null) {
-			if (other.Apellido != null)
+		if (clienteId == null) {
+			if (other.clienteId != null)
 				return false;
-		} else if (!Apellido.equals(other.Apellido))
-			return false;
-		if (ClienteId == null) {
-			if (other.ClienteId != null)
-				return false;
-		} else if (!ClienteId.equals(other.ClienteId))
-			return false;
-		if (Correo == null) {
-			if (other.Correo != null)
-				return false;
-		} else if (!Correo.equals(other.Correo))
-			return false;
-		if (DNI == null) {
-			if (other.DNI != null)
-				return false;
-		} else if (!DNI.equals(other.DNI))
-			return false;
-		if (Estado == null) {
-			if (other.Estado != null)
-				return false;
-		} else if (!Estado.equals(other.Estado))
-			return false;
-		if (Nombre == null) {
-			if (other.Nombre != null)
-				return false;
-		} else if (!Nombre.equals(other.Nombre))
-			return false;
-		if (Telefono == null) {
-			if (other.Telefono != null)
-				return false;
-		} else if (!Telefono.equals(other.Telefono))
-			return false;
-		if (usuario == null) {
-			if (other.usuario != null)
-				return false;
-		} else if (!usuario.equals(other.usuario))
+		} else if (!clienteId.equals(other.clienteId))
 			return false;
 		return true;
 	}
 	
 	//obtener y establecer
 	public Integer getClienteId() {
-		return ClienteId;
+		return clienteId;
 	}
 
 	public void setClienteId(Integer clienteId) {
-		ClienteId = clienteId;
+		this.clienteId = clienteId;
 	}
 
 	public String getNombre() {
-		return Nombre;
+		return nombre;
 	}
 
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		this.nombre = nombre;
 	}
 
 	public String getApellido() {
-		return Apellido;
+		return apellido;
 	}
 
 	public void setApellido(String apellido) {
-		Apellido = apellido;
+		this.apellido = apellido;
 	}
 
-	public Integer getDNI() {
-		return DNI;
+	public Integer getDni() {
+		return dni;
 	}
 
-	public void setDNI(Integer dNI) {
-		DNI = dNI;
+	public void setDni(Integer dni) {
+		this.dni = dni;
 	}
 
 	public Integer getTelefono() {
-		return Telefono;
+		return telefono;
 	}
 
 	public void setTelefono(Integer telefono) {
-		Telefono = telefono;
+		this.telefono = telefono;
 	}
 
 	public String getCorreo() {
-		return Correo;
+		return correo;
 	}
 
 	public void setCorreo(String correo) {
-		Correo = correo;
+		this.correo = correo;
 	}
 
 	public Character getEstado() {
-		return Estado;
+		return estado;
 	}
 
 	public void setEstado(Character estado) {
-		Estado = estado;
+		this.estado = estado;
 	}
 
 	public UsuarioDTO getUsuario() {
