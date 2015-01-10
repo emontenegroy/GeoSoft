@@ -18,14 +18,14 @@
 				<%MapaMBean mapa = (MapaMBean) session.getAttribute("mapaMBean");
 				if(mapa!=null){
 					for(HistoricaDTO h : mapa.getListaMonitoreo()){%>
-					cargarVehiculos({placa: "<%=h.getVehiculo().getPlaca()%>", nroMotor: "<%=h.getVehiculo().getNroMotor()%>", 
+					vehiculos.push({placa: "<%=h.getVehiculo().getPlaca()%>", nroMotor: "<%=h.getVehiculo().getNroMotor()%>", 
 						marca: "<%=h.getVehiculo().getMarca()%>", anio: "<%=h.getVehiculo().getAnio()%>", 
 						modelo: "<%=h.getVehiculo().getModelo()%>", estado: "<%=h.getVehiculo().getEstado()%>", 
 						descripcion: "<%=h.getVehiculo().getTipoVehiculo().getDescripcion()%>", latitud: "<%=h.getLatitud()%>", 
 						longitud: "<%=h.getLongitud()%>", velocidad: "<%=h.getVelocidad()%>", 
 						radio: "<%=h.getRadio()%>", maxFecha: "<%=h.getFecha()%>"});
 				<%}}%>
-				console.log("la patita tio");
+				console.log(vehiculos);
 				//vehiculos.push(v)	
 			}
 			</script>
@@ -37,7 +37,7 @@
 					<h:dataTable value="#{mapaMBean.listaMonitoreo}" var="lm">
 						<h:column>
 							<f:facet name="header"><h:outputText value="Placa" /></f:facet>
-							<h:outputText value="#{lm.vehiculo.placa}"></h:outputText>
+							<h:outputLabel value="#{lm.vehiculo.placa}" onclick="irAMarcador(#{lm.latitud},#{lm.longitud})" styleClass="link-button" ></h:outputLabel>
 						</h:column>
 						<h:column>
 							<f:facet name="header"><h:outputText value="NroMotor" /></f:facet>
@@ -80,7 +80,7 @@
 							<h:outputText value="#{lm.radio}"></h:outputText>
 						</h:column>
 						<h:column>
-							<f:facet name="header"><h:outputText value="MaxFecha" /></f:facet>
+							<f:facet name="header"><h:outputText value="Fecha" /></f:facet>
 							<h:outputText value="#{lm.fecha}"></h:outputText>
 						</h:column>
 					</h:dataTable>

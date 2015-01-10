@@ -30,19 +30,19 @@ public class UsuarioMBean extends General{
 		String usuario = getRequestParameterString("frmLogin:usuario");
 		String clave = getRequestParameterString("frmLogin:clave");
 		UsuarioDTO user = new UsuarioDTO(null, "", "", usuario, clave,null);
-
-		//Por Ahora System.out.println hasta en un futuro implemetar Loj4J
-		System.out.println("Usuario: "+usuario);
-		System.out.println("Clave: "+clave);
+		
+		System.out.println("usuario: "+usuario);
+		System.out.println("clave: "+clave);
 		
 		user=servicioUsuario.loguear(user);
 		
 		if(user!=null){
 			getSession(false).setAttribute("user", user);
+			System.out.println("UsuarioMBean - login - Fin");
 			return NAVIGATION_LOGIN;
 		}
 		
-		System.out.println("UsuarioMBean - login - Inicio");
+		System.out.println("UsuarioMBean - login - Fin");
 		return NAVIGATION_ERROR;
 	}
 	

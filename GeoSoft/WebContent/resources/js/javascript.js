@@ -19,28 +19,25 @@ $(window).load(function() {
 
 /*Manejo de Mapas*/
 function initialize() {
-  console.log("initialize");
+  console.log("initialize - inicio");
   cargarVehiculos();
-	
   var mapOptions = {
     zoom: 8,
     center: new google.maps.LatLng(-10.379765224421455,-77.80517578125)
   };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-  
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   refrescarMonitoreo();
+  console.log("initialize - inicio");
 }
 
 /*Manejo de Monitoreo*/
 function refrescarMonitoreo() {
-	
 	deleteOverlays(monitoreoArray);
-	//llamar a lista for
-	var latLng = new google.maps.LatLng(-10.379765224421455,-77.80517578125);
-	var marker = crearMarker(latLng, {map:map,pintar:true});
-		
-	monitoreoArray.push(marker);
+	jQuery.each(vehiculos, function(index, value) {
+	   	var latLng = new google.maps.LatLng(value.latitud,value.longitud);
+		var marker = crearMarker(latLng, {map:map,pintar:true});
+		monitoreoArray.push(marker);
+    });
 }
 
 function crearMarker(pLatLng,opt_options ){
@@ -93,8 +90,13 @@ function deleteOverlays(markersArray) {
       markersArray.length = 0;  
     }
 }
-function irALatLonBounds(arrayLatLong,opt_options){
-    //Parametros
+
+function irAMarcador(lat,lng){
+	irAMarcadores([new google.maps.LatLng(lat,lng)]);
+}
+
+function irAMarcadores(arrayLatLong,opt_options){
+	//Parametros
     var options = opt_options || {};
     var map     = options['map'] || this.map;
     //Variables
@@ -104,6 +106,5 @@ function irALatLonBounds(arrayLatLong,opt_options){
     for(var i = 0; i < longitud; i++)		  		  		  
       bounds.extend(arrayLatLong[i]);
 
-    map.fitBounds(bounds);	
+    map.fitBounds(bounds);
 }
-//google.maps.event.addDomListener(window, 'load', initialize);
