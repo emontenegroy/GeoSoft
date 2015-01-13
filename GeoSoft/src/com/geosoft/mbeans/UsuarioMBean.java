@@ -1,17 +1,20 @@
 package com.geosoft.mbeans;
 
-import java.sql.Date;
+import java.util.List;
 
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
 
+import com.geosoft.beans.HistoricaDTO;
 import com.geosoft.beans.UsuarioDTO;
+import com.geosoft.services.HistoricaService;
 import com.geosoft.services.UsuarioService;
 import com.geosoft.utils.General;
 
 public class UsuarioMBean extends General{
 	//Servicios
 	private UsuarioService servicioUsuario = new UsuarioService();
+	private HistoricaService servicioHistorica = new HistoricaService();
 	
 	//Navegacion
 	private final String NAVIGATION_LOGIN = "login";
@@ -19,10 +22,24 @@ public class UsuarioMBean extends General{
 	private final String NAVIGATION_ERROR = "";
 
 	//Variables Globales
-	
+	private List<HistoricaDTO> listaMonitoreo;
 		
 	//Constructor
+	public UsuarioMBean() {
+		System.out.println("UsuarioMBean - Inicio");
+		inicializarDatos();
+        cargarDatos();
+        System.out.println("UsuarioMBean - Fin");
+	}
 	
+	//Metodos
+	private void inicializarDatos() {
+		
+	}
+	
+	private void cargarDatos() {
+		
+	}
 	
 	//Metodos
 	public String login(){
@@ -38,6 +55,7 @@ public class UsuarioMBean extends General{
 		
 		if(user!=null){
 			getSession(false).setAttribute("user", user);
+			cargarVehiculos();
 			System.out.println("UsuarioMBean - login - Fin");
 			return NAVIGATION_LOGIN;
 		}
@@ -60,6 +78,17 @@ public class UsuarioMBean extends General{
         return NAVIGATION_LOGOUT;
     }
 	
-	//Obtener y Establecer
+	public void cargarVehiculos(){
+		System.out.println(((UsuarioDTO)getSession(false).getAttribute("user")).getNombre());
+		listaMonitoreo = servicioHistorica.listarMonitoreo((UsuarioDTO)getSession(true).getAttribute("user"));
+	}
 	
+	//Obtener y Establecer
+	public List<HistoricaDTO> getListaMonitoreo() {
+		return listaMonitoreo;
+	}
+
+	public void setListaMonitoreo(List<HistoricaDTO> listaMonitoreo) {
+		this.listaMonitoreo = listaMonitoreo;
+	}
 }

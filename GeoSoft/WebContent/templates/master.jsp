@@ -26,7 +26,7 @@
 	</head>
 
 	<body class="master">
-		<f:view>
+		<f:view locale="#{localeMBean.locale}">
 			<div class="page-header">
 				<tiles:insertAttribute name="header" />	
 			</div>

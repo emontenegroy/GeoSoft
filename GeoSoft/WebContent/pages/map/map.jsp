@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page import="java.util.List"%>
-<%@ page import="com.geosoft.mbeans.MapaMBean"%>
+<%@ page import="com.geosoft.mbeans.UsuarioMBean"%>
 <%@ page import="com.geosoft.beans.HistoricaDTO"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -15,7 +15,7 @@
 			<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCa3bppSoyDM-uT3g99L3pzJ71h7BZd07g&sensor=false"></script>
 			<script>
 			function cargarVehiculos(){
-				<%MapaMBean mapa = (MapaMBean) session.getAttribute("mapaMBean");
+				<%UsuarioMBean mapa = (UsuarioMBean) session.getAttribute("usuarioMBean");
 				if(mapa!=null){
 					for(HistoricaDTO h : mapa.getListaMonitoreo()){%>
 					vehiculos.push({placa: "<%=h.getVehiculo().getPlaca()%>", nroMotor: "<%=h.getVehiculo().getNroMotor()%>", 
@@ -34,7 +34,7 @@
 			<div id="map-canvas" class="canvas"></div>
 			<div class="monitoreo">
 				<h:form>
-					<h:dataTable value="#{mapaMBean.listaMonitoreo}" var="lm">
+					<h:dataTable value="#{usuarioMBean.listaMonitoreo}" var="lm">
 						<h:column>
 							<f:facet name="header"><h:outputText value="Placa" /></f:facet>
 							<h:outputLabel value="#{lm.vehiculo.placa}" onclick="irAMarcador(#{lm.latitud},#{lm.longitud})" styleClass="link-button" ></h:outputLabel>

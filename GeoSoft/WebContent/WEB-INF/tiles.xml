@@ -14,12 +14,28 @@
 		<put-attribute name="body" value="/pages/map/map.jsp" />
     </definition>
   
-	<definition name="userPage" extends="commonPage">
+	<definition name="muserPage" extends="commonPage">
 		<put-attribute name="body" value="/pages/maintenances/user/userList.jsp" />
     </definition>
+    
+    <definition name="mclientPage" extends="commonPage">
+		<put-attribute name="body" value="/pages/maintenances/client/clientList.jsp" />
+    </definition>
   
-	<definition name="vehiclePage" extends="commonPage">
+	<definition name="mvehiclePage" extends="commonPage">
 		<put-attribute name="body" value="/pages/maintenances/vehicle/vehicleList.jsp" />
+    </definition>
+    
+    <definition name="ruserPage" extends="commonPage">
+		<put-attribute name="body" value="/pages/reports/user/userList.jsp" />
+    </definition>
+    
+    <definition name="rclientPage" extends="commonPage">
+		<put-attribute name="body" value="/pages/reports/client/clientList.jsp" />
+    </definition>
+  
+	<definition name="rvehiclePage" extends="commonPage">
+		<put-attribute name="body" value="/pages/reports/vehicle/vehicleList.jsp" />
     </definition>
   
 </tiles-definitions>
