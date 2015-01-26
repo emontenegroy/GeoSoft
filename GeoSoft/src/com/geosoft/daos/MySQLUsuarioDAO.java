@@ -94,13 +94,13 @@ public class MySQLUsuarioDAO implements UsuarioDAO {
 			con = MySQLConexion.getConexion();
 			sp = "{call sp_Usuario_Listar(?, ?, ?, ?, ?, ?)}";
 			cst = con.prepareCall(sp);
-
-			cst.setInt(1, usuario.getUsuarioId());
-			cst.setString(2, usuario.getNombre());
-			cst.setString(3, usuario.getApellidos());
-			cst.setString(4, usuario.getUsuario());
-			cst.setString(5, usuario.getClave());
-			cst.setString(6, usuario.getEstado().toString());
+			
+			cst.setInt(1, usuario.getUsuarioId()!=null?usuario.getUsuarioId():0);
+			cst.setString(2, usuario.getNombre()!=null?usuario.getNombre():"");
+			cst.setString(3, usuario.getApellidos()!=null?usuario.getApellidos():"");
+			cst.setString(4, usuario.getUsuario()!=null?usuario.getUsuario():"");
+			cst.setString(5, usuario.getClave()!=null?usuario.getClave():"");
+			cst.setString(6, usuario.getEstado()!=null?usuario.getEstado().toString():"");
 			
 			ResultSet rs = cst.executeQuery();
 			
