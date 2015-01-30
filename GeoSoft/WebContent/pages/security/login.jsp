@@ -45,7 +45,7 @@
 							<td><h:inputSecret id="clave"></h:inputSecret></td>
 						</tr>
 						<tr>
-							<td colspan="2"><h:commandLink value="Iniciar Sesión" action="#{usuarioMBean.login}"></h:commandLink></td>
+							<td colspan="2"><h:commandLink value="Iniciar Sesión" action="#{loginMBean.login}"></h:commandLink></td>
 						</tr>
 					</table>
 				</div>

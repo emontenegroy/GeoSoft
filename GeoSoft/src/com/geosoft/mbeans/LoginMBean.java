@@ -11,7 +11,7 @@ import com.geosoft.services.HistoricaService;
 import com.geosoft.services.UsuarioService;
 import com.geosoft.utils.General;
 
-public class UsuarioMBean extends General{
+public class LoginMBean extends General{
 	//Servicios
 	private UsuarioService servicioUsuario = new UsuarioService();
 	private HistoricaService servicioHistorica = new HistoricaService();
@@ -25,11 +25,11 @@ public class UsuarioMBean extends General{
 	private List<HistoricaDTO> listaMonitoreo;
 		
 	//Constructor
-	public UsuarioMBean() {
-		System.out.println("UsuarioMBean - Inicio");
+	public LoginMBean() {
+		System.out.println("LoginMBean - Inicio");
 		inicializarDatos();
         cargarDatos();
-        System.out.println("UsuarioMBean - Fin");
+        System.out.println("LoginMBean - Fin");
 	}
 	
 	//Metodos
@@ -43,7 +43,7 @@ public class UsuarioMBean extends General{
 	
 	//Metodos
 	public String login(){
-		System.out.println("UsuarioMBean - login - Inicio");
+		System.out.println("LoginMBean - login - Inicio");
 		String usuario = getRequestParameterString("frmLogin:usuario");
 		String clave = getRequestParameterString("frmLogin:clave");
 		UsuarioDTO user = new UsuarioDTO(null, "", "", usuario, clave,null);
@@ -56,16 +56,16 @@ public class UsuarioMBean extends General{
 		if(user!=null){
 			getSession(false).setAttribute("user", user);
 			cargarVehiculos();
-			System.out.println("UsuarioMBean - login - Fin");
+			System.out.println("LoginMBean - login - Fin");
 			return NAVIGATION_LOGIN;
 		}
 		
-		System.out.println("UsuarioMBean - login - Fin");
+		System.out.println("LoginMBean - login - Fin");
 		return NAVIGATION_ERROR;
 	}
 	
 	public String logout() throws Exception {
-        System.out.println("UsuarioMBean - logout - Inicio");                                           
+        System.out.println("LoginMBean - logout - Inicio");                                           
         FacesContext context;
         HttpSession session;
         
@@ -74,7 +74,7 @@ public class UsuarioMBean extends General{
         if (session != null) {            
             session.invalidate();
         }       
-        System.out.println("UsuarioMBean - logout - Fin");
+        System.out.println("LoginMBean - logout - Fin");
         return NAVIGATION_LOGOUT;
     }
 	

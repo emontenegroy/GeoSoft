@@ -18,8 +18,8 @@
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
-		<managed-bean-name>usuarioMBean</managed-bean-name>
-		<managed-bean-class>com.geosoft.mbeans.UsuarioMBean</managed-bean-class>
+		<managed-bean-name>loginMBean</managed-bean-name>
+		<managed-bean-class>com.geosoft.mbeans.LoginMBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
@@ -37,6 +37,11 @@
 		<navigation-case>
 			<from-outcome>login</from-outcome>
 			<to-view-id>/homePage.html</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>logout</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
 			<redirect/>
 		</navigation-case>
 		
