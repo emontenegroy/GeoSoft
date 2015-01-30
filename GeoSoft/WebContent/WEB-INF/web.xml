@@ -21,15 +21,22 @@
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>/faces/*</url-pattern>
   </servlet-mapping>
+  
+  <listener>
+    <listener-class>org.apache.tiles.web.startup.simple.SimpleTilesListener</listener-class>
+  </listener>
+  
   <servlet>
-    <servlet-name>tiles</servlet-name>
-    <servlet-class>org.apache.tiles.web.startup.simple.SimpleTilesInitializerServlet</servlet-class>
-    <init-param>
-      <param-name>org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>
-      <param-value>/WEB-INF/tiles.xml</param-value>
-    </init-param>
-    <load-on-startup>2</load-on-startup>
+	<servlet-name>Tiles Dispatcher Servlet</servlet-name>
+	<servlet-class>org.apache.tiles.web.util.TilesDispatchServlet</servlet-class>
+	<load-on-startup>2</load-on-startup>
   </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Tiles Dispatcher Servlet</servlet-name>
+    <url-pattern>*.html</url-pattern>
+  </servlet-mapping>
+  
   <context-param>
     <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
     <param-value>com.geosoft.resources.Messages</param-value>

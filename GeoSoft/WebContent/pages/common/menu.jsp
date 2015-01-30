@@ -17,18 +17,18 @@
 		      <input type="checkbox" />
 		      <a href="#" data-toggle="dropdown"><fmt:message key="maintenances" /></a>
 		      <ul class="dropdown-menu">
-		        <li><h:commandLink id="clMUsuario" action="musuario"><fmt:message key="user" /></h:commandLink></li>
-		        <li><h:commandLink id="clMCliente" action="mcliente"><fmt:message key="client" /></h:commandLink></li>
-		        <li><h:commandLink id="clMVehiculo" action="mvehiculo"><fmt:message key="vehicle" /></h:commandLink></li>
+		        <li><h:commandLink id="clMUsuario" action="mUserList"><fmt:message key="user" /></h:commandLink></li>
+		        <li><h:commandLink id="clMCliente" action="mClientList"><fmt:message key="client" /></h:commandLink></li>
+		        <li><h:commandLink id="clMVehiculo" action="mVehicleList"><fmt:message key="vehicle" /></h:commandLink></li>
 		      </ul>
 		    </li>
 		    <li class="dropdown">
 		      <input type="checkbox" />
 		      <a href="#" data-toggle="dropdown"><fmt:message key="reports" /></a>
 		      <ul class="dropdown-menu">
-		      	<li><h:commandLink id="clRUsuario" action="rusuario"><fmt:message key="user" /></h:commandLink></li>
-		      	<li><h:commandLink id="clRCliente" action="rcliente"><fmt:message key="client" /></h:commandLink></li>
-		        <li><h:commandLink id="clRVehiculo" action="rvehiculo"><fmt:message key="vehicle" /></h:commandLink></li>
+		      	<li><h:commandLink id="clRUsuario" action="rUserReport"><fmt:message key="user" /></h:commandLink></li>
+		      	<li><h:commandLink id="clRCliente" action="rClientReport"><fmt:message key="client" /></h:commandLink></li>
+		        <li><h:commandLink id="clRVehiculo" action="rVehicleReport"><fmt:message key="vehicle" /></h:commandLink></li>
 		      </ul>
 		    </li>
 		  </ul>

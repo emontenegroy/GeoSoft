@@ -9,33 +9,63 @@
 	    <put-attribute name="menu" value="/pages/common/menu.jsp" />
 	    <put-attribute name="footer" value="/pages/common/footer.jsp" />
 	</definition>
- 
-    <definition name="homePage" extends="commonPage">
+ 	
+ 	<!-- Pagina Principal -->
+ 	
+    <definition name="homePage.html" extends="commonPage">
 		<put-attribute name="body" value="/pages/map/map.jsp" />
     </definition>
-  
-	<definition name="muserPage" extends="commonPage">
+	
+	<!-- Mantenimiento  -->
+
+	<definition name="maintenances/user/userList.html" extends="commonPage">
 		<put-attribute name="body" value="/pages/maintenances/user/userList.jsp" />
     </definition>
-    
-    <definition name="mclientPage" extends="commonPage">
+	
+	<definition name="maintenances/user/userInsert.html" extends="commonPage">
+		<put-attribute name="body" value="/pages/maintenances/user/userInsert.jsp" />
+    </definition>
+      
+	<definition name="maintenances/user/userUpdate.html" extends="commonPage">
+		<put-attribute name="body" value="/pages/maintenances/user/userUpdate.jsp" />
+    </definition>
+        
+    <definition name="maintenances/client/clientList.html" extends="commonPage">
 		<put-attribute name="body" value="/pages/maintenances/client/clientList.jsp" />
     </definition>
+
+    <definition name="maintenances/client/clientInsert.html" extends="commonPage">
+		<put-attribute name="body" value="/pages/maintenances/client/clientInsert.jsp" />
+    </definition>
   
-	<definition name="mvehiclePage" extends="commonPage">
+    <definition name="maintenances/client/clientUpdate.html" extends="commonPage">
+		<put-attribute name="body" value="/pages/maintenances/client/clientUpdate.jsp" />
+    </definition>
+  
+	<definition name="maintenances/vehicle/vehicleList.html" extends="commonPage">
 		<put-attribute name="body" value="/pages/maintenances/vehicle/vehicleList.jsp" />
     </definition>
     
-    <definition name="ruserPage" extends="commonPage">
-		<put-attribute name="body" value="/pages/reports/user/userList.jsp" />
+	<definition name="maintenances/vehicle/vehicleInsert.html" extends="commonPage">
+		<put-attribute name="body" value="/pages/maintenances/vehicle/vehicleInsert.jsp" />
     </definition>
     
-    <definition name="rclientPage" extends="commonPage">
-		<put-attribute name="body" value="/pages/reports/client/clientList.jsp" />
+	<definition name="maintenances/vehicle/vehicleUpdate.html" extends="commonPage">
+		<put-attribute name="body" value="/pages/maintenances/vehicle/vehicleUpdate.jsp" />
+    </definition>    
+    
+    <!-- Reportes -->
+    
+    <definition name="reports/user/userReport.html" extends="commonPage">
+		<put-attribute name="body" value="/pages/reports/user/userReport.jsp" />
+    </definition>
+    
+    <definition name="reports/client/clientReport.html" extends="commonPage">
+		<put-attribute name="body" value="/pages/reports/client/clientReport.jsp" />
     </definition>
   
-	<definition name="rvehiclePage" extends="commonPage">
-		<put-attribute name="body" value="/pages/reports/vehicle/vehicleList.jsp" />
+	<definition name="reports/vehicle/vehicleReport.html" extends="commonPage">
+		<put-attribute name="body" value="/pages/reports/vehicle/vehicleReport.jsp" />
     </definition>
   
 </tiles-definitions>

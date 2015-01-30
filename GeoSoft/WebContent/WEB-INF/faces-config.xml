@@ -31,320 +31,78 @@
 	<!-- Manejo de Navegacion -->
 	<!-- Login -->
 	<navigation-rule>
-		<from-view-id>/index.jsp</from-view-id>
+		<from-view-id>/*</from-view-id>
+		
+		<!-- Pagina Principal -->
 		<navigation-case>
 			<from-outcome>login</from-outcome>
-			<to-view-id>/pages/home.jsp</to-view-id>
+			<to-view-id>/homePage.html</to-view-id>
 			<redirect/>
 		</navigation-case>
-	</navigation-rule>
-	
-	<!-- ##### Pagina Principal ##### -->
-	<navigation-rule>
-		<from-view-id>/pages/home.jsp</from-view-id>
+		
+		<!-- Mantenimiento -->
 		<navigation-case>
-			<from-outcome>logout</from-outcome>
-			<to-view-id>/index.jsp</to-view-id>
+			<from-outcome>mUserList</from-outcome>
+			<to-view-id>/maintenances/user/userList.html</to-view-id>
 			<redirect/>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>mapa</from-outcome>
-			<to-view-id>/pages/home.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Mantenimientos -->
-		<navigation-case>
-			<from-outcome>musuario</from-outcome>
-			<to-view-id>/pages/maintenances/user/user.jsp</to-view-id>
+			<from-outcome>mUserInsert</from-outcome>
+			<to-view-id>/maintenances/user/userInsert.html</to-view-id>
 			<redirect/>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>mcliente</from-outcome>
-			<to-view-id>/pages/maintenances/client/client.jsp</to-view-id>
+			<from-outcome>mUserUpdate</from-outcome>
+			<to-view-id>/maintenances/user/userUpdate.html</to-view-id>
 			<redirect/>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>mvehiculo</from-outcome>
-			<to-view-id>/pages/maintenances/vehicle/vehicle.jsp</to-view-id>
+			<from-outcome>mClientList</from-outcome>
+			<to-view-id>/maintenances/client/clientList.html</to-view-id>
 			<redirect/>
 		</navigation-case>
+		<navigation-case>
+			<from-outcome>mClientInsert</from-outcome>
+			<to-view-id>/maintenances/client/clientInsert.html</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>mClientUpdate</from-outcome>
+			<to-view-id>/maintenances/client/clientUpdate.html</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>mVehicleList</from-outcome>
+			<to-view-id>/maintenances/vehicle/vehicleList.html</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>mVehicleInsert</from-outcome>
+			<to-view-id>/maintenances/vehicle/vehicleInsert.html</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>mVehicleUpdate</from-outcome>
+			<to-view-id>/maintenances/vehicle/vehicleUpdate.html</to-view-id>
+			<redirect/>
+		</navigation-case>
+		
 		<!-- Reportes -->
 		<navigation-case>
-			<from-outcome>rusuario</from-outcome>
-			<to-view-id>/pages/reports/user/user.jsp</to-view-id>
+			<from-outcome>rUserReport</from-outcome>
+			<to-view-id>/reports/user/userReport.html</to-view-id>
 			<redirect/>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>rcliente</from-outcome>
-			<to-view-id>/pages/reports/client/client.jsp</to-view-id>
+			<from-outcome>rClientReport</from-outcome>
+			<to-view-id>/reports/client/clientReport.html</to-view-id>
 			<redirect/>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>rvehiculo</from-outcome>
-			<to-view-id>/pages/reports/vehicle/vehicle.jsp</to-view-id>
+			<from-outcome>rVehicleReport</from-outcome>
+			<to-view-id>/reports/vehicle/vehicleReport.html</to-view-id>
 			<redirect/>
 		</navigation-case>
-	</navigation-rule>
-	
-	<!-- ##### MANTENIMIENTOS ##### -->
-	
-	<!-- Mantenimiento de Usuarios -->
-	<navigation-rule>
-		<from-view-id>/pages/maintenances/user/user.jsp</from-view-id>
-		<!-- Mapa -->
-		<navigation-case>
-			<from-outcome>mapa</from-outcome>
-			<to-view-id>/pages/home.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Mantenimientos -->
-		<navigation-case>
-			<from-outcome>musuario</from-outcome>
-			<to-view-id>/pages/maintenances/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mcliente</from-outcome>
-			<to-view-id>/pages/maintenances/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mvehiculo</from-outcome>
-			<to-view-id>/pages/maintenances/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Reportes -->
-		<navigation-case>
-			<from-outcome>rusuario</from-outcome>
-			<to-view-id>/pages/reports/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rcliente</from-outcome>
-			<to-view-id>/pages/reports/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rvehiculo</from-outcome>
-			<to-view-id>/pages/reports/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-	</navigation-rule>
-	
-	<!-- Mantenimiento de Clientes -->
-	<navigation-rule>
-		<from-view-id>/pages/maintenances/client/client.jsp</from-view-id>
-		<!-- Mapa -->
-		<navigation-case>
-			<from-outcome>mapa</from-outcome>
-			<to-view-id>/pages/home.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Mantenimientos -->
-		<navigation-case>
-			<from-outcome>musuario</from-outcome>
-			<to-view-id>/pages/maintenances/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mcliente</from-outcome>
-			<to-view-id>/pages/maintenances/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mvehiculo</from-outcome>
-			<to-view-id>/pages/maintenances/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Reportes -->
-		<navigation-case>
-			<from-outcome>rusuario</from-outcome>
-			<to-view-id>/pages/reports/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rcliente</from-outcome>
-			<to-view-id>/pages/reports/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rvehiculo</from-outcome>
-			<to-view-id>/pages/reports/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-	</navigation-rule>
-	
-	<!-- Mantenimiento de Vehiculos -->
-	<navigation-rule>
-		<from-view-id>/pages/maintenances/vehicle/vehicle.jsp</from-view-id>
-		<!-- Mapa -->
-		<navigation-case>
-			<from-outcome>mapa</from-outcome>
-			<to-view-id>/pages/home.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Mantenimientos -->
-		<navigation-case>
-			<from-outcome>musuario</from-outcome>
-			<to-view-id>/pages/maintenances/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mcliente</from-outcome>
-			<to-view-id>/pages/maintenances/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mvehiculo</from-outcome>
-			<to-view-id>/pages/maintenances/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Reportes -->
-		<navigation-case>
-			<from-outcome>rusuario</from-outcome>
-			<to-view-id>/pages/reports/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rcliente</from-outcome>
-			<to-view-id>/pages/reports/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rvehiculo</from-outcome>
-			<to-view-id>/pages/reports/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-	</navigation-rule>
-	
-	<!-- ##### REPORTES ##### -->
-	
-	<!-- Mantenimiento de Usuarios -->
-	<navigation-rule>
-		<from-view-id>/pages/reports/user/user.jsp</from-view-id>
-		<!-- Mapa -->
-		<navigation-case>
-			<from-outcome>mapa</from-outcome>
-			<to-view-id>/pages/home.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Mantenimientos -->
-		<navigation-case>
-			<from-outcome>musuario</from-outcome>
-			<to-view-id>/pages/maintenances/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mcliente</from-outcome>
-			<to-view-id>/pages/maintenances/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mvehiculo</from-outcome>
-			<to-view-id>/pages/maintenances/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Reportes -->
-		<navigation-case>
-			<from-outcome>rusuario</from-outcome>
-			<to-view-id>/pages/reports/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rcliente</from-outcome>
-			<to-view-id>/pages/reports/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rvehiculo</from-outcome>
-			<to-view-id>/pages/reports/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-	</navigation-rule>
-	
-	<!-- Mantenimiento de Clientes -->
-	<navigation-rule>
-		<from-view-id>/pages/reports/client/client.jsp</from-view-id>
-		<!-- Mapa -->
-		<navigation-case>
-			<from-outcome>mapa</from-outcome>
-			<to-view-id>/pages/home.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Mantenimientos -->
-		<navigation-case>
-			<from-outcome>musuario</from-outcome>
-			<to-view-id>/pages/maintenances/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mcliente</from-outcome>
-			<to-view-id>/pages/maintenances/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mvehiculo</from-outcome>
-			<to-view-id>/pages/maintenances/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Reportes -->
-		<navigation-case>
-			<from-outcome>rusuario</from-outcome>
-			<to-view-id>/pages/reports/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rcliente</from-outcome>
-			<to-view-id>/pages/reports/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rvehiculo</from-outcome>
-			<to-view-id>/pages/reports/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-	</navigation-rule>
-	
-	<!-- Mantenimiento de Vehiculos -->
-	<navigation-rule>
-		<from-view-id>/pages/reports/vehicle/vehicle.jsp</from-view-id>
-		<!-- Mapa -->
-		<navigation-case>
-			<from-outcome>mapa</from-outcome>
-			<to-view-id>/pages/home.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Mantenimientos -->
-		<navigation-case>
-			<from-outcome>musuario</from-outcome>
-			<to-view-id>/pages/maintenances/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mcliente</from-outcome>
-			<to-view-id>/pages/maintenances/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>mvehiculo</from-outcome>
-			<to-view-id>/pages/maintenances/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<!-- Reportes -->
-		<navigation-case>
-			<from-outcome>rusuario</from-outcome>
-			<to-view-id>/pages/reports/user/user.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rcliente</from-outcome>
-			<to-view-id>/pages/reports/client/client.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>rvehiculo</from-outcome>
-			<to-view-id>/pages/reports/vehicle/vehicle.jsp</to-view-id>
-			<redirect/>
-		</navigation-case>
+		
 	</navigation-rule>
 </faces-config>

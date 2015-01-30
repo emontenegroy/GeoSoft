@@ -1,62 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14202040208680" configfile="/GeoSoft/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="index" x="338" y="178" id="pf142064659540521" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf142064659540522" inlinks="pf14209102181180" path="/index.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/home" x="122" y="178" id="pf142064659540523" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" outlinks="pf14209102181180 pf14209102181191 pf14209106883516 pf14210296674144 pf142102990769921 pf142102990769923 pf142103158732632 pf142103158732633" inlinks="pf142064659540522 pf14209102181191 pf142103196342442 pf142103222507367 pf142103222507368 pf142103222507369 pf142103222507370 pf142103222507371" path="/pages/home.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/maintenances/user/user" id="pf14209102181194" referenceLink="//@navigationRule.7/@navigationCase.1/@toViewId|" outlinks="pf14210296674159 pf142102966741511 pf142102990769924 pf142102990769926 pf142103158732634 pf142103158732635 pf142103222507371" inlinks="pf14210296674144 pf14210296674159 pf142102966741515 pf142103196342543 pf142103196342544 pf142103196342545 pf142103196342546" path="/pages/maintenances/user/user.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/maintenances/vehicle/vehicle" id="pf14209102181195" referenceLink="//@navigationRule.7/@navigationCase.3/@toViewId|" outlinks="pf142102966741515 pf142102966741519 pf142102990769927 pf142102990769929 pf142103158732636 pf142103158732637 pf142103222507369" inlinks="pf14209106883516 pf142102966741511 pf142102966741519 pf142103196342547 pf142103196342548 pf142103196342549 pf142103196342550" path="/pages/maintenances/vehicle/vehicle.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/reports/user/user" id="pf142102990769930" referenceLink="//@navigationRule.7/@navigationCase.4/@toViewId|" outlinks="pf142103196342544 pf142103196342551 pf142103196342548 pf142103196342552 pf142103196342553 pf142103196342554 pf142103222507368" inlinks="pf142102990769921 pf142102990769924 pf142102990769927 pf142103196342555 pf142103196342552 pf142103196342556 pf142103196342557" path="/pages/reports/user/user.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/reports/vehicle/vehicle" id="pf142102990769931" referenceLink="//@navigationRule.7/@navigationCase.6/@toViewId|" outlinks="pf142103196342546 pf142103196342558 pf142103196342550 pf142103196342557 pf142103196342559 pf142103196342560 pf142103222507367" inlinks="pf142102990769923 pf142102990769926 pf142102990769929 pf142103196342561 pf142103196342554 pf142103196342562 pf142103196342560" path="/pages/reports/vehicle/vehicle.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/maintenances/client/client" id="pf142103158732638" referenceLink="//@navigationRule.7/@navigationCase.2/@toViewId|" outlinks="pf142103196342543 pf142103196342563 pf142103196342547 pf142103196342555 pf142103196342564 pf142103196342561 pf142103222507370" inlinks="pf142103158732632 pf142103158732634 pf142103158732636 pf142103196342563 pf142103196342551 pf142103196342565 pf142103196342558" path="/pages/maintenances/client/client.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/reports/client/client" id="pf142103158732639" referenceLink="//@navigationRule.7/@navigationCase.5/@toViewId|" outlinks="pf142103196342442 pf142103196342545 pf142103196342565 pf142103196342549 pf142103196342556 pf142103196342566 pf142103196342562" inlinks="pf142103158732633 pf142103158732635 pf142103158732637 pf142103196342564 pf142103196342553 pf142103196342566 pf142103196342559" path="/pages/reports/client/client.jsp"/>
-  <links id="pf142064659540522" target="pf142064659540523" source="pf142064659540521" outcome="login" redirect="true"/>
-  <links id="pf14209102181180" target="pf142064659540521" source="pf142064659540523" outcome="logout" redirect="true"/>
-  <links id="pf14209102181191" target="pf142064659540523" source="pf142064659540523" outcome="mapa" redirect="true"/>
-  <links id="pf14209106883516" target="pf14209102181195" source="pf142064659540523" outcome="mvehiculo" redirect="true"/>
-  <links id="pf14210296674144" target="pf14209102181194" source="pf142064659540523" outcome="musuario" redirect="true"/>
-  <links id="pf14210296674159" target="pf14209102181194" source="pf14209102181194" outcome="musuario" redirect="true"/>
-  <links id="pf142102966741511" target="pf14209102181195" source="pf14209102181194" outcome="mvehiculo" redirect="true"/>
-  <links id="pf142102966741515" target="pf14209102181194" source="pf14209102181195" outcome="musuario" redirect="true"/>
-  <links id="pf142102966741519" target="pf14209102181195" source="pf14209102181195" outcome="mvehiculo" redirect="true"/>
-  <links id="pf142102990769921" target="pf142102990769930" source="pf142064659540523" outcome="rusuario" redirect="true"/>
-  <links id="pf142102990769923" target="pf142102990769931" source="pf142064659540523" outcome="rvehiculo" redirect="true"/>
-  <links id="pf142102990769924" target="pf142102990769930" source="pf14209102181194" outcome="rusuario" redirect="true"/>
-  <links id="pf142102990769926" target="pf142102990769931" source="pf14209102181194" outcome="rvehiculo" redirect="true"/>
-  <links id="pf142102990769927" target="pf142102990769930" source="pf14209102181195" outcome="rusuario" redirect="true"/>
-  <links id="pf142102990769929" target="pf142102990769931" source="pf14209102181195" outcome="rvehiculo" redirect="true"/>
-  <links id="pf142103158732632" target="pf142103158732638" source="pf142064659540523" outcome="mcliente" redirect="true"/>
-  <links id="pf142103158732633" target="pf142103158732639" source="pf142064659540523" outcome="rcliente" redirect="true"/>
-  <links id="pf142103158732634" target="pf142103158732638" source="pf14209102181194" outcome="mcliente" redirect="true"/>
-  <links id="pf142103158732635" target="pf142103158732639" source="pf14209102181194" outcome="rcliente" redirect="true"/>
-  <links id="pf142103158732636" target="pf142103158732638" source="pf14209102181195" outcome="mcliente" redirect="true"/>
-  <links id="pf142103158732637" target="pf142103158732639" source="pf14209102181195" outcome="rcliente" redirect="true"/>
-  <links id="pf142103196342543" target="pf14209102181194" source="pf142103158732638" outcome="musuario" redirect="true"/>
-  <links id="pf142103196342563" target="pf142103158732638" source="pf142103158732638" outcome="mcliente" redirect="true"/>
-  <links id="pf142103196342547" target="pf14209102181195" source="pf142103158732638" outcome="mvehiculo" redirect="true"/>
-  <links id="pf142103196342555" target="pf142102990769930" source="pf142103158732638" outcome="rusuario" redirect="true"/>
-  <links id="pf142103196342564" target="pf142103158732639" source="pf142103158732638" outcome="rcliente" redirect="true"/>
-  <links id="pf142103196342561" target="pf142102990769931" source="pf142103158732638" outcome="rvehiculo" redirect="true"/>
-  <links id="pf142103196342544" target="pf14209102181194" source="pf142102990769930" outcome="musuario" redirect="true"/>
-  <links id="pf142103196342551" target="pf142103158732638" source="pf142102990769930" outcome="mcliente" redirect="true"/>
-  <links id="pf142103196342548" target="pf14209102181195" source="pf142102990769930" outcome="mvehiculo" redirect="true"/>
-  <links id="pf142103196342552" target="pf142102990769930" source="pf142102990769930" outcome="rusuario" redirect="true"/>
-  <links id="pf142103196342553" target="pf142103158732639" source="pf142102990769930" outcome="rcliente" redirect="true"/>
-  <links id="pf142103196342554" target="pf142102990769931" source="pf142102990769930" outcome="rvehiculo" redirect="true"/>
-  <links id="pf142103196342442" target="pf142064659540523" source="pf142103158732639" outcome="mapa" redirect="true"/>
-  <links id="pf142103196342545" target="pf14209102181194" source="pf142103158732639" outcome="musuario" redirect="true"/>
-  <links id="pf142103196342565" target="pf142103158732638" source="pf142103158732639" outcome="mcliente" redirect="true"/>
-  <links id="pf142103196342549" target="pf14209102181195" source="pf142103158732639" outcome="mvehiculo" redirect="true"/>
-  <links id="pf142103196342556" target="pf142102990769930" source="pf142103158732639" outcome="rusuario" redirect="true"/>
-  <links id="pf142103196342566" target="pf142103158732639" source="pf142103158732639" outcome="rcliente" redirect="true"/>
-  <links id="pf142103196342562" target="pf142102990769931" source="pf142103158732639" outcome="rvehiculo" redirect="true"/>
-  <links id="pf142103196342546" target="pf14209102181194" source="pf142102990769931" outcome="musuario" redirect="true"/>
-  <links id="pf142103196342558" target="pf142103158732638" source="pf142102990769931" outcome="mcliente" redirect="true"/>
-  <links id="pf142103196342550" target="pf14209102181195" source="pf142102990769931" outcome="mvehiculo" redirect="true"/>
-  <links id="pf142103196342557" target="pf142102990769930" source="pf142102990769931" outcome="rusuario" redirect="true"/>
-  <links id="pf142103196342559" target="pf142103158732639" source="pf142102990769931" outcome="rcliente" redirect="true"/>
-  <links id="pf142103196342560" target="pf142102990769931" source="pf142102990769931" outcome="rvehiculo" redirect="true"/>
-  <links id="pf142103222507367" target="pf142064659540523" source="pf142102990769931" outcome="mapa" redirect="true"/>
-  <links id="pf142103222507368" target="pf142064659540523" source="pf142102990769930" outcome="mapa" redirect="true"/>
-  <links id="pf142103222507369" target="pf142064659540523" source="pf14209102181195" outcome="mapa" redirect="true"/>
-  <links id="pf142103222507370" target="pf142064659540523" source="pf142103158732638" outcome="mapa" redirect="true"/>
-  <links id="pf142103222507371" target="pf142064659540523" source="pf14209102181194" outcome="mapa" redirect="true"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf14225787195637" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14225787195638 pf142257929179110 pf142257929179112 pf142258184897216 pf142258184897217 pf142258184897218 pf142258184897219 pf142258184897220 pf142258184897221 pf142258184897222 pf142258184897223 pf142258184897224 pf142258184897225" path="/*"/>
+  <nodes xsi:type="pageflow:PFPage" name="homePage.html" id="pf14225787195639" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf14225787195638" path="/homePage.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="maintenances/user/userInsert.html" id="pf142257929179113" referenceLink="//@navigationRule.0/@navigationCase.11/@toViewId|" inlinks="pf142257929179110" path="/maintenances/user/userInsert.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="maintenances/user/userUpdate.html" id="pf142257929179115" referenceLink="//@navigationRule.0/@navigationCase.12/@toViewId|" inlinks="pf142257929179112" path="/maintenances/user/userUpdate.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="maintenances/vehicle/vehicleInsert.html" id="pf142258184897226" referenceLink="//@navigationRule.0/@navigationCase.17/@toViewId|" inlinks="pf142258184897216" path="/maintenances/vehicle/vehicleInsert.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="maintenances/vehicle/vehicleUpdate.html" id="pf142258184897227" referenceLink="//@navigationRule.0/@navigationCase.18/@toViewId|" inlinks="pf142258184897217" path="/maintenances/vehicle/vehicleUpdate.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="maintenances/client/clientUpdate.html" id="pf142258184897228" referenceLink="//@navigationRule.0/@navigationCase.15/@toViewId|" inlinks="pf142258184897218" path="/maintenances/client/clientUpdate.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="maintenances/client/clientInsert.html" id="pf142258184897229" referenceLink="//@navigationRule.0/@navigationCase.14/@toViewId|" inlinks="pf142258184897219" path="/maintenances/client/clientInsert.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="maintenances/user/userList.html" id="pf142258184897230" referenceLink="//@navigationRule.0/@navigationCase.10/@toViewId|" inlinks="pf142258184897220" path="/maintenances/user/userList.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="maintenances/client/clientList.html" id="pf142258184897231" referenceLink="//@navigationRule.0/@navigationCase.13/@toViewId|" inlinks="pf142258184897221" path="/maintenances/client/clientList.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="maintenances/vehicle/vehicleList.html" id="pf142258184897232" referenceLink="//@navigationRule.0/@navigationCase.16/@toViewId|" inlinks="pf142258184897222" path="/maintenances/vehicle/vehicleList.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="reports/user/userReport.html" id="pf142258184897233" referenceLink="//@navigationRule.0/@navigationCase.10/@toViewId|" inlinks="pf142258184897223" path="/reports/user/userReport.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="reports/client/clientReport.html" id="pf142258184897234" referenceLink="//@navigationRule.0/@navigationCase.11/@toViewId|" inlinks="pf142258184897224" path="/reports/client/clientReport.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="reports/vehicle/vehicleReport.html" id="pf142258184897235" referenceLink="//@navigationRule.0/@navigationCase.12/@toViewId|" inlinks="pf142258184897225" path="/reports/vehicle/vehicleReport.html"/>
+  <links id="pf14225787195638" target="pf14225787195639" source="pf14225787195637" outcome="login" redirect="true"/>
+  <links id="pf142257929179110" target="pf142257929179113" source="pf14225787195637" outcome="mUserInsert" redirect="true"/>
+  <links id="pf142257929179112" target="pf142257929179115" source="pf14225787195637" outcome="mUserUpdate" redirect="true"/>
+  <links id="pf142258184897216" target="pf142258184897226" source="pf14225787195637" outcome="mVehicleInsert" redirect="true"/>
+  <links id="pf142258184897217" target="pf142258184897227" source="pf14225787195637" outcome="mVehicleUpdate" redirect="true"/>
+  <links id="pf142258184897218" target="pf142258184897228" source="pf14225787195637" outcome="mClientUpdate" redirect="true"/>
+  <links id="pf142258184897219" target="pf142258184897229" source="pf14225787195637" outcome="mClientInsert" redirect="true"/>
+  <links id="pf142258184897220" target="pf142258184897230" source="pf14225787195637" outcome="mUserList" redirect="true"/>
+  <links id="pf142258184897221" target="pf142258184897231" source="pf14225787195637" outcome="mClientList" redirect="true"/>
+  <links id="pf142258184897222" target="pf142258184897232" source="pf14225787195637" outcome="mVehicleList" redirect="true"/>
+  <links id="pf142258184897223" target="pf142258184897233" source="pf14225787195637" outcome="rUserReport" redirect="true"/>
+  <links id="pf142258184897224" target="pf142258184897234" source="pf14225787195637" outcome="rClientReport" redirect="true"/>
+  <links id="pf142258184897225" target="pf142258184897235" source="pf14225787195637" outcome="rVehicleReport" redirect="true"/>
 </pageflow:Pageflow>

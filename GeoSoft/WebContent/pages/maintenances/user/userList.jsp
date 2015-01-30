@@ -21,7 +21,7 @@
 			<h:dataTable value="#{mUsuarioMBean.listaUsuarios}" var="lu">
 				<h:column>
 					<f:facet name="header"><h:outputText value="Nombre" /></f:facet>
-					<h:outputLabel value="#{lu.nombre}"></h:outputLabel>
+					<h:commandLink value="#{lu.nombre}" action="mUserUpdate"></h:commandLink>
 				</h:column>
 				<h:column>
 					<f:facet name="header"><h:outputText value="Apellido" /></f:facet>
@@ -36,6 +36,9 @@
 					<h:outputText value="#{lu.estado}"></h:outputText>
 				</h:column>
 			</h:dataTable>
+    	</div>
+    	<div class="pie">
+    		<h:commandLink value="Agregar Usuario" action="mUserInsert"></h:commandLink>
     	</div>
 	</div>
 </h:form>
