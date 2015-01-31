@@ -1,5 +1,6 @@
 package com.geosoft.daos;
 
+import com.geosoft.interfaces.ClienteDAO;
 import com.geosoft.interfaces.HistoricaDAO;
 import com.geosoft.interfaces.UsuarioDAO;
 
@@ -14,6 +15,10 @@ public class SQLDAOFactory extends DAOFactory {
 	@Override
 	public HistoricaDAO getHistoricaDAO() {
 		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public ClienteDAO getClienteDAO(){
 		return null;
 	}
 

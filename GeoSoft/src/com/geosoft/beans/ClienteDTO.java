@@ -17,6 +17,17 @@ public class ClienteDTO {
 	}
 	
 	public ClienteDTO(Integer clienteId, String nombre, String apellido,
+			Integer dni, Integer telefono, String correo, Character estado) {
+		this.clienteId = clienteId;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.dni = dni;
+		this.telefono = telefono;
+		this.correo = correo;
+		this.estado = estado;
+	}
+	
+/*	public ClienteDTO(Integer clienteId, String nombre, String apellido,
 			Integer dni, Integer telefono, String correo, Character estado,
 			UsuarioDTO usuario) {
 		this.clienteId = clienteId;
@@ -27,7 +38,7 @@ public class ClienteDTO {
 		this.correo = correo;
 		this.estado = estado;
 		this.usuario = usuario;
-	}
+	}*/
 	
 	//metodos para comparacion de objetos
 	@Override
