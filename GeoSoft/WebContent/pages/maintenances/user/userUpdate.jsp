@@ -26,7 +26,7 @@
     		</div>
     	</div>
     	<div class="pie">
-    		<h:commandLink id="ManGuadar" styleClass="button" action="#{mUsuarioMBean.insertar}"><fmt:message key="save" /></h:commandLink>
+    		<h:commandLink id="ManGuadar" styleClass="button" action="#{mUsuarioMBean.actualizar}"><fmt:message key="save" /></h:commandLink>
     		<h:commandLink id="ManCancelar" styleClass="button" action="mUserList"><fmt:message key="cancel" /></h:commandLink>
     	</div>
 	</div>

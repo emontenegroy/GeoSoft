@@ -17,6 +17,7 @@ public class MUsuarioMBean extends General{
 	//Navegacion
 	private final String NAVIGATION_INSERT = "mUserInsert";
 	private final String NAVIGATION_LIST = "mUserList";
+	private final String NAVIGATION_UPDATE = "mUserUpdate";
 	
 	//Variables Globales
 	
@@ -29,6 +30,7 @@ public class MUsuarioMBean extends General{
 	private List<UsuarioDTO> listaUsuarios;
 	private UsuarioDTO usuario;
 	private List<SelectItem> listaEstado;
+
 	
 	//Constructor
 	public MUsuarioMBean(){
@@ -99,11 +101,17 @@ public class MUsuarioMBean extends General{
 	public String cargarActualizar(){
 		System.out.println("InicializaActualizar - Inicio");
 		System.out.println("InicializaActualizar - Fin");
-		return NAVIGATION_INSERT;
+		return NAVIGATION_UPDATE;
 	}
 	
 	public String actualizar(){
 		System.out.println("Actualizar - Inicio");
+		if(servicioUsuario.actualizar(usuario)>0){
+			valorCombo=0;
+			valorInput="";
+			busquedaBasica();
+			return NAVIGATION_LIST;
+		};
 		System.out.println("Actualizar - Fin");
 		return NAVIGATION_INSERT;
 	}

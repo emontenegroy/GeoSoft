@@ -19,7 +19,9 @@
 			<h:dataTable value="#{mUsuarioMBean.listaUsuarios}" var="lu">
 				<h:column>
 					<f:facet name="header"><h:outputText><fmt:message key="name" /></h:outputText></f:facet>
-					<h:commandLink value="#{lu.nombre}" action="mUserUpdate"></h:commandLink>
+					<h:commandLink value="#{lu.nombre}" action="#{mUsuarioMBean.cargarActualizar}">
+						<f:setPropertyActionListener target="#{mUsuarioMBean.usuario}" value="#{lu}" />
+					</h:commandLink>
 				</h:column>
 				<h:column>
 					<f:facet name="header"><h:outputText><fmt:message key="lastname" /></h:outputText></f:facet>
