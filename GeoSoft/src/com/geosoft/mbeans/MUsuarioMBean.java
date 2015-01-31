@@ -16,6 +16,7 @@ public class MUsuarioMBean extends General{
 	
 	//Navegacion
 	private final String NAVIGATION_INSERT = "mUserInsert";
+	private final String NAVIGATION_LIST = "mUserList";
 	
 	//Variables Globales
 	
@@ -85,6 +86,12 @@ public class MUsuarioMBean extends General{
 
 	public String insertar(){
 		System.out.println("Insertar - Inicio");
+		if(servicioUsuario.insertar(usuario)>0){
+			valorCombo=0;
+			valorInput="";
+			busquedaBasica();
+			return NAVIGATION_LIST;
+		};
 		System.out.println("Insertar - Fin");
 		return NAVIGATION_INSERT;
 	}

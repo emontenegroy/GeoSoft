@@ -113,7 +113,6 @@ body {
   padding: 0;
   margin: 0 0 20px 0;
 }
-
 .container > ul > li{
   padding: 0;
 }
@@ -124,7 +123,7 @@ body {
   font-size: 40px;
   text-align: center;
   line-height: 1.4;
-  color: #333B3E;
+  color: #056F97;
 }
 
 .dropdown {
@@ -136,15 +135,15 @@ body {
 .dropdown [data-toggle="dropdown"] {
   display: block;
   color: white;
-  background: #333B3E;
-  -moz-box-shadow: 0 1px 0 #4a565a inset, 0 -1px 0 #1c2022 inset;
-  -webkit-box-shadow: 0 1px 0 #4a565a inset, 0 -1px 0 #1c2022 inset;
-  box-shadow: 0 1px 0 #4a565a inset, 0 -1px 0 #1c2022 inset;
+  background: #056F97;
+  -moz-box-shadow: 0 1px 0 #0793c8 inset, 0 -1px 0 #034b66 inset;
+  -webkit-box-shadow: 0 1px 0 #0793c8 inset, 0 -1px 0 #034b66 inset;
+  box-shadow: 0 1px 0 #0793c8 inset, 0 -1px 0 #034b66 inset;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   padding: 10px;
 }
 .dropdown [data-toggle="dropdown"]:hover {
-  background: #3a4346;
+  background: #057aa6;
 }
 .dropdown [data-toggle="dropdown"]:before {
   position: absolute;
@@ -446,6 +445,7 @@ body {
     transform: scaleY(0);
   }
 }
+
 
 /* Mantenimiento */
 .mantenimiento{
