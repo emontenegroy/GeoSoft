@@ -9,6 +9,9 @@ public class UsuarioDTO {
 	private String clave;
 	private Character estado;
 	
+	//Otras variables
+	private boolean chbEliminar;
+	
 	//constructor
 	public UsuarioDTO() {
 	}
@@ -87,5 +90,10 @@ public class UsuarioDTO {
 	public void setEstado(Character estado) {
 		this.estado = estado;
 	}
-	
+	public boolean isChbEliminar() {
+		return chbEliminar;
+	}
+	public void setChbEliminar(boolean chbEliminar) {
+		this.chbEliminar = chbEliminar;
+	}
 }

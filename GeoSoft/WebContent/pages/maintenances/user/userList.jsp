@@ -35,10 +35,15 @@
 					<f:facet name="header"><h:outputText><fmt:message key="state" /></h:outputText></f:facet>
 					<h:outputText value="#{lu.estado}"></h:outputText>
 				</h:column>
+				<h:column>
+					<f:facet name="header"><h:outputText><fmt:message key="delete" /></h:outputText></f:facet>
+					<h:selectBooleanCheckbox value="#{lu.chbEliminar}"/>
+				</h:column>
 			</h:dataTable>
     	</div>
     	<div class="pie">
-    		<h:commandLink styleClass="button" action="#{mUsuarioMBean.cargarInsertar}"><fmt:message key="add" /></h:commandLink>
+    		<h:commandLink id="ManGuadar" styleClass="button" action="#{mUsuarioMBean.cargarInsertar}"><fmt:message key="add" /></h:commandLink>
+    		<h:commandLink id="ManEliminar" styleClass="button" action="#{mUsuarioMBean.eliminar}"><fmt:message key="delete" /></h:commandLink>
     	</div>
 	</div>
 </h:form>

@@ -116,6 +116,18 @@ public class MUsuarioMBean extends General{
 		return NAVIGATION_INSERT;
 	}
 	
+	public String eliminar(){
+		for(UsuarioDTO u : listaUsuarios){
+			if(u.isChbEliminar()){
+				servicioUsuario.eliminar(u.getUsuarioId());
+			}
+		}
+		valorCombo=0;
+		valorInput="";
+		busquedaBasica();
+		return NAVIGATION_LIST;
+	}
+	
 	//Obtener y Establecer
 	public List<SelectItem> getListaCombo() {
 		return listaCombo;
