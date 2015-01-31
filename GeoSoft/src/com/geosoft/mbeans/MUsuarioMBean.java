@@ -15,6 +15,8 @@ public class MUsuarioMBean extends General{
 	private UsuarioService servicioUsuario = new UsuarioService();
 	
 	//Navegacion
+	private final String NAVIGATION_INSERT = "mUserInsert";
+	
 	//Variables Globales
 	
 	//Variables para la Busqueda
@@ -24,6 +26,8 @@ public class MUsuarioMBean extends General{
 	
 	//Variables del Mantenimiento 
 	private List<UsuarioDTO> listaUsuarios;
+	private UsuarioDTO usuario;
+	private List<SelectItem> listaEstado;
 	
 	//Constructor
 	public MUsuarioMBean(){
@@ -38,6 +42,7 @@ public class MUsuarioMBean extends General{
 	private void cargarDatos() {
 		//Cargamos los Combos
 		cargarBusqueda();
+		cargarEstado();
 	}
 	
 	private void cargarBusqueda(){
@@ -46,6 +51,13 @@ public class MUsuarioMBean extends General{
 		listaCombo.add(new SelectItem(1, "Apellido"));
 		listaCombo.add(new SelectItem(2, "Usuario"));
 		listaCombo.add(new SelectItem(3, "Estado"));
+	}
+	
+	private void cargarEstado(){
+		listaEstado = new ArrayList<SelectItem>();
+		listaEstado.add(new SelectItem('N', "Nuevo"));
+		listaEstado.add(new SelectItem('A', "Activo"));
+		listaEstado.add(new SelectItem('I', "Inactivo"));
 	}
 	
 	public void busquedaBasica(){
@@ -60,7 +72,33 @@ public class MUsuarioMBean extends General{
 			}
 			listaUsuarios=servicioUsuario.listar(usuario);
 		}
-		System.out.println("busquedaBasica - Inicio");
+		System.out.println("busquedaBasica - Fin");
+	}
+	
+	public String cargarInsertar(){
+		System.out.println("InicializaInsertar - Inicio");
+		usuario = new UsuarioDTO();
+		usuario.setEstado('N');
+		System.out.println("InicializaInsertar - Fin");
+		return NAVIGATION_INSERT;
+	}
+
+	public String insertar(){
+		System.out.println("Insertar - Inicio");
+		System.out.println("Insertar - Fin");
+		return NAVIGATION_INSERT;
+	}
+	
+	public String cargarActualizar(){
+		System.out.println("InicializaActualizar - Inicio");
+		System.out.println("InicializaActualizar - Fin");
+		return NAVIGATION_INSERT;
+	}
+	
+	public String actualizar(){
+		System.out.println("Actualizar - Inicio");
+		System.out.println("Actualizar - Fin");
+		return NAVIGATION_INSERT;
 	}
 	
 	//Obtener y Establecer
@@ -88,6 +126,17 @@ public class MUsuarioMBean extends General{
 	public void setListaUsuarios(List<UsuarioDTO> listaUsuarios) {
 		this.listaUsuarios = listaUsuarios;
 	}
-	
+	public UsuarioDTO getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(UsuarioDTO usuario) {
+		this.usuario = usuario;
+	}
+	public List<SelectItem> getListaEstado() {
+		return listaEstado;
+	}
+	public void setListaEstado(List<SelectItem> listaEstado) {
+		this.listaEstado = listaEstado;
+	}
 	
 }
