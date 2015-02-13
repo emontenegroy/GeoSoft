@@ -30,6 +30,7 @@ public class MUsuarioMBean extends General{
 	private List<UsuarioDTO> listaUsuarios;
 	private UsuarioDTO usuario;
 	private List<SelectItem> listaEstado;
+	private UsuarioDTO usuarioSeleccionado;
 
 	
 	//Constructor
@@ -98,8 +99,21 @@ public class MUsuarioMBean extends General{
 		return NAVIGATION_INSERT;
 	}
 	
+	private UsuarioDTO copyUsuario(UsuarioDTO usuario){
+		UsuarioDTO u = new UsuarioDTO();
+		//for all properties in FOo
+		u.setUsuarioId(usuario.getUsuarioId());
+		u.setNombre(usuario.getNombre());
+		u.setApellidos(usuario.getApellidos());
+		u.setUsuario(usuario.getUsuario());
+		u.setClave(usuario.getClave());
+		u.setEstado(usuario.getEstado());
+		return u;
+	}
+	
 	public String cargarActualizar(){
 		System.out.println("InicializaActualizar - Inicio");
+		usuario = copyUsuario(usuario);
 		System.out.println("InicializaActualizar - Fin");
 		return NAVIGATION_UPDATE;
 	}
@@ -164,6 +178,12 @@ public class MUsuarioMBean extends General{
 	}
 	public void setListaEstado(List<SelectItem> listaEstado) {
 		this.listaEstado = listaEstado;
+	}
+	public UsuarioDTO getUsuarioSeleccionado() {
+		return usuarioSeleccionado;
+	}
+	public void setUsuarioSeleccionado(UsuarioDTO usuarioSeleccionado) {
+		this.usuarioSeleccionado = usuarioSeleccionado;
 	}
 	
 }
