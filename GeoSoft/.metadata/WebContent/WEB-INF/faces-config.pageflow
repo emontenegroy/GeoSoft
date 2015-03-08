@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14202040208680" configfile="/GeoSoft/WebContent/WEB-INF/faces-config.xml">
   <nodes xsi:type="pageflow:PFPage" name="*" id="pf14225787195637" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14225787195638 pf142257929179110 pf142257929179112 pf142258184897216 pf142258184897217 pf142258184897218 pf142258184897219 pf142258184897220 pf142258184897221 pf142258184897222 pf142258184897223 pf142258184897224 pf142258184897225 pf142258601225438" path="/*"/>
-  <nodes xsi:type="pageflow:PFPage" name="homePage.html" id="pf14225787195639" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14225787195638" path="/homePage.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="homePage.html" id="pf14225787195639" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14225787195638" path="/homePage.html"/>
   <nodes xsi:type="pageflow:PFPage" name="maintenances/user/userInsert.html" id="pf142257929179113" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf142257929179110" path="/maintenances/user/userInsert.html"/>
   <nodes xsi:type="pageflow:PFPage" name="maintenances/user/userUpdate.html" id="pf142257929179115" referenceLink="//@navigationRule.0/@navigationCase.4/@toViewId|" inlinks="pf142257929179112" path="/maintenances/user/userUpdate.html"/>
   <nodes xsi:type="pageflow:PFPage" name="maintenances/vehicle/vehicleInsert.html" id="pf142258184897226" referenceLink="//@navigationRule.0/@navigationCase.9/@toViewId|" inlinks="pf142258184897216" path="/maintenances/vehicle/vehicleInsert.html"/>
@@ -14,7 +14,7 @@
   <nodes xsi:type="pageflow:PFPage" name="reports/user/userReport.html" id="pf142258184897233" referenceLink="//@navigationRule.0/@navigationCase.11/@toViewId|" inlinks="pf142258184897223" path="/reports/user/userReport.html"/>
   <nodes xsi:type="pageflow:PFPage" name="reports/client/clientReport.html" id="pf142258184897234" referenceLink="//@navigationRule.0/@navigationCase.12/@toViewId|" inlinks="pf142258184897224" path="/reports/client/clientReport.html"/>
   <nodes xsi:type="pageflow:PFPage" name="reports/vehicle/vehicleReport.html" id="pf142258184897235" referenceLink="//@navigationRule.0/@navigationCase.13/@toViewId|" inlinks="pf142258184897225" path="/reports/vehicle/vehicleReport.html"/>
-  <nodes xsi:type="pageflow:PFPage" name="index" id="pf142258601225439" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf142258601225438" path="/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="index" id="pf142258601225439" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf142258601225438" path="/index.jsp"/>
   <links id="pf14225787195638" target="pf14225787195639" source="pf14225787195637" outcome="login" redirect="true"/>
   <links id="pf142257929179110" target="pf142257929179113" source="pf14225787195637" outcome="mUserInsert" redirect="true"/>
   <links id="pf142257929179112" target="pf142257929179115" source="pf14225787195637" outcome="mUserUpdate" redirect="true"/>

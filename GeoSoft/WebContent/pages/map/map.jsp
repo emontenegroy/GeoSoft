@@ -37,60 +37,10 @@
 			<div id="map-canvas" class="canvas"></div>
 			<div class="monitoreo">
 				<h:form>
-					<h:dataTable value="#{loginMBean.listaMonitoreo}" var="lm">
-						<h:column>
-							<f:facet name="header"><h:outputText value="Placa" /></f:facet>
-							<h:outputLabel value="#{lm.vehiculo.placa}" onclick="irAMarcador(#{lm.latitud},#{lm.longitud})" styleClass="link-button" ></h:outputLabel>
-						</h:column>
-						<h:column>
-							<f:facet name="header"><h:outputText value="NroMotor" /></f:facet>
-							<h:outputText value="#{lm.vehiculo.nroMotor}"></h:outputText>
-						</h:column>
-						<h:column>
-							<f:facet name="header"><h:outputText value="Marca" /></f:facet>
-							<h:outputText value="#{lm.vehiculo.marca}"></h:outputText>
-						</h:column>
-						<h:column>
-							<f:facet name="header"><h:outputText value="Anio" /></f:facet>
-							<h:outputText value="#{lm.vehiculo.anio}"></h:outputText>
-						</h:column>
-						<h:column>
-							<f:facet name="header"><h:outputText value="Modelo" /></f:facet>
-							<h:outputText value="#{lm.vehiculo.modelo}"></h:outputText>
-						</h:column>
-						<h:column>
-							<f:facet name="header"><h:outputText value="Estado" /></f:facet>
-							<h:outputText value="#{lm.vehiculo.estado}"></h:outputText>
-						</h:column>
-						<h:column>
-							<f:facet name="header"><h:outputText value="Descripcion" /></f:facet>
-							<h:outputText value="#{lm.vehiculo.tipoVehiculo.descripcion}"></h:outputText>
-						</h:column>
-						<h:column>
-							<f:facet name="header"><h:outputText value="Latitud" /></f:facet>
-							<h:outputText value="#{lm.latitud}"></h:outputText>
-						</h:column>
-						<h:column>
-							<f:facet name="header"><h:outputText value="Longitud" /></f:facet>
-							<h:outputText value="#{lm.longitud}"></h:outputText>
-						</h:column>
-						<h:column>
-							<f:facet name="header"><h:outputText value="Velocidad" /></f:facet>
-							<h:outputText value="#{lm.velocidad}"></h:outputText>
-						</h:column>
-						<h:column>
-							<f:facet name="header"><h:outputText value="Radio" /></f:facet>
-							<h:outputText value="#{lm.radio}"></h:outputText>
-						</h:column>
-						<h:column>
-							<f:facet name="header"><h:outputText value="Fecha" /></f:facet>
-							<h:outputText value="#{lm.fecha}"></h:outputText>
-						</h:column>
-					</h:dataTable>
 					<rich:dataTable value="#{loginMBean.listaMonitoreo}" var="lm2">
                   		<rich:column>
 							<f:facet name="header"><h:outputText value="Placa" /></f:facet>
-							<h:outputLabel value="#{lm2.vehiculo.placa}" onclick="irAMarcador(#{lm.latitud},#{lm.longitud})" styleClass="link-button" ></h:outputLabel>
+							<h:outputLabel value="#{lm2.vehiculo.placa}" onclick="irAMarcador(#{lm2.latitud},#{lm2.longitud})" styleClass="link-button" ></h:outputLabel>
 						</rich:column>
 						<rich:column>
 							<f:facet name="header"><h:outputText value="NroMotor" /></f:facet>

@@ -10,7 +10,7 @@
 		      <input type="checkbox" />
 		      <a href="#" data-toggle="dropdown"><fmt:message key="map" /></a>
 		      <ul class="dropdown-menu">
-		        <li><h:commandLink id="clMapa" action="mapa"><fmt:message key="map" /></h:commandLink></li>
+		        <li><h:commandLink id="clMapa" action="login"><fmt:message key="map" /></h:commandLink></li>
 		      </ul>
 		    </li>
 		    <li class="dropdown">
